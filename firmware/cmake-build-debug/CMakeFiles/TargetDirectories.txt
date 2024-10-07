@@ -1,3 +1,0 @@
-F:/Desktop/graduation_project/firmware/cmake-build-debug/CMakeFiles/firmware.elf.dir
-F:/Desktop/graduation_project/firmware/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/Desktop/graduation_project/firmware/cmake-build-debug/CMakeFiles/rebuild_cache.dir

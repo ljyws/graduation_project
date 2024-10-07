@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ctrl"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ctrl.elf">
+				<Option output="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/ctrl.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F405xx"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/application"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 ctrl.elf"/>
+					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ctrl.elf/fast">
+				<Option output="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/ctrl.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F405xx"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/application"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 ctrl.elf/fast"/>
+					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/FreeRTOSConfig.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/adc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/board.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/dma.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/gpio.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/main.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/spi.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/stm32f4xx_hal_conf.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/stm32f4xx_it.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/adc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/board.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/dma.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/freertos.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/gpio.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/main.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/spi.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/stm32f4xx_hal_msp.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/stm32f4xx_hal_timebase_tim.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/stm32f4xx_it.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/syscalls.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/sysmem.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/system_stm32f4xx.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Startup/startup_stm32f405rgtx.s">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cachel1_armv7.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_armclang_ltm.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_armv81mml.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm35p.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm55.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_cm85.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/core_starmc1.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/pac_armv81.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/pmu_armv8.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/LICENSE.txt">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/LICENSE.txt">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_mpool.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/STM32F405RGTX_FLASH.ld">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App/usb_device.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App/usb_device.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App/usbd_cdc_if.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App/usbd_cdc_if.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App/usbd_desc.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App/usbd_desc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target/usbd_conf.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target/usbd_conf.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/application/main.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/application/main_help.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

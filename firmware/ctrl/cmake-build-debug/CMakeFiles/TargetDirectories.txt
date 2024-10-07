@@ -1,0 +1,3 @@
+G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/CMakeFiles/ctrl.elf.dir
+G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/CMakeFiles/edit_cache.dir
+G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/CMakeFiles/rebuild_cache.dir
