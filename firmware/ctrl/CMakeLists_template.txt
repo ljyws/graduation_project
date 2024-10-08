@@ -49,12 +49,17 @@ else ()
 endif ()
 
 include_directories(${includes}
-                   application)
+                   Application
+                   Ctrl
+                   Stm32_Interface
+                   )
 
 add_definitions(${defines})
 
 file(GLOB_RECURSE SOURCES ${sources}
-                          "application/*.*")
+                          "Application/*.*"
+                          "Ctrl/*.*"
+                          "Stm32_Interface/*.*")
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 

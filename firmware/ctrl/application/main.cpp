@@ -2,7 +2,6 @@
 
 static void rtos_main(void* arg)
 {
-    MX_USB_DEVICE_Init();
     for(;;)
     {
         HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port,LED_GREEN_Pin);
