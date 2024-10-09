@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.29"
+						"string" : "3.27"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ctrl.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ctrl.elf-Debug-049ac007da7047eedd48.json",
+					"jsonFile" : "target-ctrl.elf-Debug-6ea2a40ca3feef7e4c8a.json",
 					"name" : "ctrl.elf",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug",
-		"source" : "D:/my_project/graduation_project/firmware/ctrl"
+		"build" : "G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug",
+		"source" : "G:/ljyws/graduation_project/firmware/ctrl"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 6
 	}
 }

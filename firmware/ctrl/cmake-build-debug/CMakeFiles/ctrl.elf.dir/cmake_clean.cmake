@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ctrl.elf.dir/Application/main.cpp.obj"
-  "CMakeFiles/ctrl.elf.dir/Application/main.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Core/Src/adc.c.obj"
   "CMakeFiles/ctrl.elf.dir/Core/Src/adc.c.obj.d"
   "CMakeFiles/ctrl.elf.dir/Core/Src/board.cpp.obj"
@@ -114,6 +112,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/USB_DEVICE/App/usbd_desc.c.obj.d"
   "CMakeFiles/ctrl.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj"
   "CMakeFiles/ctrl.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj.d"
+  "CMakeFiles/ctrl.elf.dir/application/main.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/application/main.cpp.obj.d"
   "ctrl.elf"
   "ctrl.elf.manifest"
   "ctrl.elf.pdb"

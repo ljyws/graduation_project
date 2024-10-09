@@ -70,3 +70,10 @@ uint16_t STM32_GPIO::get_pin_number()
     }
     return pin_number;
 }
+
+void STM32_GPIO::write(bool val)
+{
+    if (port_) {
+        HAL_GPIO_WritePin(port_, pin_mask_, val ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    }
+}

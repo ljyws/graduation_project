@@ -14,14 +14,9 @@ public:
         const uint8_t *tx_buf;
         uint8_t *rx_buf;
         size_t len;
-        void (*on_complete)(void*, bool);
-        void* on_complete_ctx;
-        bool is_in_use = false;
-        struct spi_task *next;
     };
 
     STM32_SPI(SPI_HandleTypeDef *hspi) : hspi_(hspi){}
-
 
     void transfer_async(spi_task* task);
 
@@ -32,6 +27,7 @@ public:
 private:
     bool start();
     SPI_HandleTypeDef *hspi_;
+    spi_task *task = nullptr;
 };
 
 

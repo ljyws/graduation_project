@@ -190,63 +190,63 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Core/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/App"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/Target"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Application"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Application"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Ctrl"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Ctrl"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Stm32_Interface"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"
 				}
 			],
 			"language" : "CXX",
@@ -349,63 +349,63 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Core/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/App"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/Target"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Application"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Application"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Ctrl"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Ctrl"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Stm32_Interface"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"
 				}
 			],
 			"language" : "C",
@@ -563,63 +563,63 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Core/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/App"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/App"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/Target"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Application"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Application"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Ctrl"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Ctrl"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/my_project/graduation_project/firmware/ctrl/Stm32_Interface"
+					"path" : "G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"
 				}
 			],
 			"language" : "ASM",
@@ -654,7 +654,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug/ctrl.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/ctrl.map",
 				"role" : "flags"
 			},
 			{
@@ -679,7 +679,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "D:/my_project/graduation_project/firmware/ctrl/STM32F405RGTX_FLASH.ld",
+				"fragment" : "G:/ljyws/graduation_project/firmware/ctrl/STM32F405RGTX_FLASH.ld",
 				"role" : "flags"
 			}
 		],
@@ -894,12 +894,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Application/main.cpp",
+			"path" : "application/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Application/main_help.h",
+			"path" : "application/main_help.h",
 			"sourceGroupIndex" : 1
 		},
 		{

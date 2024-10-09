@@ -4,4 +4,6 @@
 #include "board.h"
 #include "cmsis_os.h"
 
+#include "stm32_gpio.h"
+
 #endif
