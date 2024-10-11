@@ -30,6 +30,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
   "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d"
   "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj"

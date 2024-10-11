@@ -14,7 +14,7 @@ class STM32_GPIO
 {
 public:
     static const STM32_GPIO none;
-
+    STM32_GPIO() : port_(nullptr), pin_mask_(0) {}
     STM32_GPIO(GPIO_TypeDef *port, uint16_t pin) : port_(port), pin_mask_(pin){}
 
 

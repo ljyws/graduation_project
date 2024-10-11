@@ -496,6 +496,30 @@ Ctrl/encoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.s
 .PHONY : Ctrl/encoder.cpp.s
 
+Ctrl/utils.obj: Ctrl/utils.cpp.obj
+.PHONY : Ctrl/utils.obj
+
+# target to build an object file
+Ctrl/utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+.PHONY : Ctrl/utils.cpp.obj
+
+Ctrl/utils.i: Ctrl/utils.cpp.i
+.PHONY : Ctrl/utils.i
+
+# target to preprocess a source file
+Ctrl/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.i
+.PHONY : Ctrl/utils.cpp.i
+
+Ctrl/utils.s: Ctrl/utils.cpp.s
+.PHONY : Ctrl/utils.s
+
+# target to generate assembly for a file
+Ctrl/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.s
+.PHONY : Ctrl/utils.cpp.s
+
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj
 
@@ -1559,6 +1583,9 @@ help:
 	@echo ... Ctrl/encoder.obj
 	@echo ... Ctrl/encoder.i
 	@echo ... Ctrl/encoder.s
+	@echo ... Ctrl/utils.obj
+	@echo ... Ctrl/utils.i
+	@echo ... Ctrl/utils.s
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s
