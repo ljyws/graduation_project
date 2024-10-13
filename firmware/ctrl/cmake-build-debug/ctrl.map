@@ -174,6 +174,66 @@ Discarded input sections
  .text          0x00000000       0x14 CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj
  .data          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj
  .bss           0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj
+ .text          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .data          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .bss           0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83016configEfPf
+                0x00000000       0x80 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83016configEfPf
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83016configEfPf
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83018do_checkEv
+                0x00000000       0x1c CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83018do_checkEv
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83018do_checkEv
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83018is_readyEv
+                0x00000000        0xe CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83018is_readyEv
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83018is_readyEv
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83018read_regENS_9RegName_eEPt
+                0x00000000       0xe0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83018read_regENS_9RegName_eEPt
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83018read_regENS_9RegName_eEPt
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83019get_errorEv
+                0x00000000       0x3a CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83019get_errorEv
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83019get_errorEv
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83019write_regENS_9RegName_eEt
+                0x00000000       0x64 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83019write_regENS_9RegName_eEt
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83019write_regENS_9RegName_eEt
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .text._ZN7DRV83014initEv
+                0x00000000      0x10c CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.extab.text._ZN7DRV83014initEv
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.exidx.text._ZN7DRV83014initEv
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .rodata        0x00000000       0x10 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .rodata._ZN7DRV830111spi_config_E
+                0x00000000       0x2c CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_info    0x00000000     0x1b3e CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_abbrev  0x00000000      0x469 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_loc     0x00000000      0x378 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_aranges
+                0x00000000       0x50 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_ranges  0x00000000       0x40 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_line    0x00000000      0x86d CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_str     0x00000000     0x1127 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .comment       0x00000000       0x4a CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .debug_frame   0x00000000       0xfc CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
  .text          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .data          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .bss           0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
@@ -225,18 +285,26 @@ Discarded input sections
                 0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .ARM.exidx.text._ZN7Encoder4initEv
                 0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
- .debug_info    0x00000000     0x1dc0 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
+ .debug_info    0x00000000     0x1dcd CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .debug_abbrev  0x00000000      0x576 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .debug_loc     0x00000000      0x3c2 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .debug_aranges
                 0x00000000       0x58 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .debug_ranges  0x00000000       0x48 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .debug_line    0x00000000      0x909 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
- .debug_str     0x00000000     0x12e9 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
+ .debug_str     0x00000000     0x12fb CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .comment       0x00000000       0x4a CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .debug_frame   0x00000000       0xe4 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
+ .text          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+ .data          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+ .bss           0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+ .debug_line    0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+ .debug_str     0x00000000      0x15b CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+ .comment       0x00000000       0x4a CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
  .text          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .data          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .bss           0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
@@ -264,16 +332,28 @@ Discarded input sections
                 0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .ARM.exidx.text._Z10wrap_pm_pif
                 0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_info    0x00000000      0x2e3 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_abbrev  0x00000000      0x176 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_loc     0x00000000      0x142 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .text._Z6microsv
+                0x00000000       0x24 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .ARM.extab.text._Z6microsv
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .ARM.exidx.text._Z6microsv
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .text._Z8delay_usm
+                0x00000000       0x1a CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .ARM.extab.text._Z8delay_usm
+                0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .ARM.exidx.text._Z8delay_usm
+                0x00000000        0x8 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_info    0x00000000      0xeb9 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_abbrev  0x00000000      0x315 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_loc     0x00000000      0x1bd CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .debug_aranges
-                0x00000000       0x38 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_ranges  0x00000000       0x28 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_line    0x00000000      0x2ff CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_str     0x00000000      0x315 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+                0x00000000       0x48 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_ranges  0x00000000       0x38 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_line    0x00000000      0x5b7 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_str     0x00000000      0x759 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .comment       0x00000000       0x4a CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
- .debug_frame   0x00000000       0x8c CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
+ .debug_frame   0x00000000       0xc4 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
  .text          0x00000000        0x0 CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
@@ -2229,7 +2309,9 @@ LOAD CMakeFiles/ctrl.elf.dir/Core/Src/syscalls.c.obj
 LOAD CMakeFiles/ctrl.elf.dir/Core/Src/sysmem.c.obj
 LOAD CMakeFiles/ctrl.elf.dir/Core/Src/system_stm32f4xx.c.obj
 LOAD CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj
+LOAD CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
 LOAD CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj
+LOAD CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
 LOAD CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj
 LOAD CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 LOAD CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj

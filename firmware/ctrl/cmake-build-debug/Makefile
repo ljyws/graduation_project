@@ -472,6 +472,30 @@ Core/Startup/startup_stm32f405rgtx.s.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj
 .PHONY : Core/Startup/startup_stm32f405rgtx.s.obj
 
+Ctrl/drv8301.obj: Ctrl/drv8301.cpp.obj
+.PHONY : Ctrl/drv8301.obj
+
+# target to build an object file
+Ctrl/drv8301.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj
+.PHONY : Ctrl/drv8301.cpp.obj
+
+Ctrl/drv8301.i: Ctrl/drv8301.cpp.i
+.PHONY : Ctrl/drv8301.i
+
+# target to preprocess a source file
+Ctrl/drv8301.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.i
+.PHONY : Ctrl/drv8301.cpp.i
+
+Ctrl/drv8301.s: Ctrl/drv8301.cpp.s
+.PHONY : Ctrl/drv8301.s
+
+# target to generate assembly for a file
+Ctrl/drv8301.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.s
+.PHONY : Ctrl/drv8301.cpp.s
+
 Ctrl/encoder.obj: Ctrl/encoder.cpp.obj
 .PHONY : Ctrl/encoder.obj
 
@@ -495,6 +519,30 @@ Ctrl/encoder.s: Ctrl/encoder.cpp.s
 Ctrl/encoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.s
 .PHONY : Ctrl/encoder.cpp.s
+
+Ctrl/foc.obj: Ctrl/foc.cpp.obj
+.PHONY : Ctrl/foc.obj
+
+# target to build an object file
+Ctrl/foc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj
+.PHONY : Ctrl/foc.cpp.obj
+
+Ctrl/foc.i: Ctrl/foc.cpp.i
+.PHONY : Ctrl/foc.i
+
+# target to preprocess a source file
+Ctrl/foc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.i
+.PHONY : Ctrl/foc.cpp.i
+
+Ctrl/foc.s: Ctrl/foc.cpp.s
+.PHONY : Ctrl/foc.s
+
+# target to generate assembly for a file
+Ctrl/foc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.s
+.PHONY : Ctrl/foc.cpp.s
 
 Ctrl/utils.obj: Ctrl/utils.cpp.obj
 .PHONY : Ctrl/utils.obj
@@ -1580,9 +1628,15 @@ help:
 	@echo ... Core/Src/system_stm32f4xx.i
 	@echo ... Core/Src/system_stm32f4xx.s
 	@echo ... Core/Startup/startup_stm32f405rgtx.obj
+	@echo ... Ctrl/drv8301.obj
+	@echo ... Ctrl/drv8301.i
+	@echo ... Ctrl/drv8301.s
 	@echo ... Ctrl/encoder.obj
 	@echo ... Ctrl/encoder.i
 	@echo ... Ctrl/encoder.s
+	@echo ... Ctrl/foc.obj
+	@echo ... Ctrl/foc.i
+	@echo ... Ctrl/foc.s
 	@echo ... Ctrl/utils.obj
 	@echo ... Ctrl/utils.i
 	@echo ... Ctrl/utils.s

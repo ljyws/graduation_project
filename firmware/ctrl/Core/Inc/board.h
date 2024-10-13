@@ -8,6 +8,7 @@
 #include "adc.h"
 #include "usb_device.h"
 
+#define TIM_TIME_BASE TIM14
 
 // Period in [s]
 #define CURRENT_MEAS_PERIOD ( (float)2*TIM_1_8_PERIOD_CLOCKS*(TIM_1_8_RCR+1) / (float)TIM_1_8_CLOCK_HZ )
