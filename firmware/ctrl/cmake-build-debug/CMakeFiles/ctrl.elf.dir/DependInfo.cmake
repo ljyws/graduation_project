@@ -97,6 +97,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/my_project/graduation_project/firmware/ctrl/USB_DEVICE/Target/usbd_conf.c" "CMakeFiles/ctrl.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Application/main.cpp" "CMakeFiles/ctrl.elf.dir/Application/main.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Application/main.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Core/Src/board.cpp" "CMakeFiles/ctrl.elf.dir/Core/Src/board.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Core/Src/board.cpp.obj.d"
+  "D:/my_project/graduation_project/firmware/ctrl/Ctrl/axis.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/drv8301.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/encoder.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/foc.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj.d"

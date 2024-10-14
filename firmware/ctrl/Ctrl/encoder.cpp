@@ -144,9 +144,9 @@ bool Encoder::update()
     pos_estimate_ = pos_estimate_counts_ / (float)config_.cpr;
     vel_estimate_ = vel_estimate_counts_ / (float)config_.cpr;
 
-    float pos_circular = pos_circular_;
+    float pos_circular = pos_circular_.any().value_or(0.0f);
     pos_circular += wrap_pm((pos_cpr_counts_ - pos_cpr_counts_last)/(float)config_.cpr,1.0f);
-    // pos_circular = fmodf_pos(pos_circular, )
+    pos_circular = fmodf_pos(pos_circular, 1.0f);
     pos_circular_ = pos_circular;
 
     int32_t corrected_enc = count_in_cpr_ - config_.phase_offset;
@@ -165,13 +165,13 @@ bool Encoder::update()
 
     float interpolated_enc = corrected_enc + interpolation_;
 
-    float elec_rad_per_enc;//= axis_->motor_.config_.pole_pairs * 2 * M_PI * (1.0f / (float)(config_.cpr));
+    float elec_rad_per_enc = 7.0f * 2 * M_PI * (1.0f / (float)(config_.cpr));
     float ph = elec_rad_per_enc * (interpolated_enc - config_.phase_offset_float);
 
     if (is_ready_)
     {
         phase_ = wrap_pm_pi(ph) * config_.direction;
-        // phase_vel_ = (2*M_PI) * *vel_estimate_ * axis_->motor_.config_.pole_pairs * config_.direction;
+        phase_vel_ = (2*M_PI) * *vel_estimate_.present() * 7.0f * config_.direction;
     }
     return true;
 }

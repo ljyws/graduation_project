@@ -472,6 +472,30 @@ Core/Startup/startup_stm32f405rgtx.s.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj
 .PHONY : Core/Startup/startup_stm32f405rgtx.s.obj
 
+Ctrl/axis.obj: Ctrl/axis.cpp.obj
+.PHONY : Ctrl/axis.obj
+
+# target to build an object file
+Ctrl/axis.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj
+.PHONY : Ctrl/axis.cpp.obj
+
+Ctrl/axis.i: Ctrl/axis.cpp.i
+.PHONY : Ctrl/axis.i
+
+# target to preprocess a source file
+Ctrl/axis.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.i
+.PHONY : Ctrl/axis.cpp.i
+
+Ctrl/axis.s: Ctrl/axis.cpp.s
+.PHONY : Ctrl/axis.s
+
+# target to generate assembly for a file
+Ctrl/axis.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.s
+.PHONY : Ctrl/axis.cpp.s
+
 Ctrl/drv8301.obj: Ctrl/drv8301.cpp.obj
 .PHONY : Ctrl/drv8301.obj
 
@@ -1628,6 +1652,9 @@ help:
 	@echo ... Core/Src/system_stm32f4xx.i
 	@echo ... Core/Src/system_stm32f4xx.s
 	@echo ... Core/Startup/startup_stm32f405rgtx.obj
+	@echo ... Ctrl/axis.obj
+	@echo ... Ctrl/axis.i
+	@echo ... Ctrl/axis.s
 	@echo ... Ctrl/drv8301.obj
 	@echo ... Ctrl/drv8301.i
 	@echo ... Ctrl/drv8301.s

@@ -4,8 +4,12 @@
 #include "stm32_spi.h"
 #include "stm32_gpio.h"
 #include "board.h"
+#include "component.h"
 #include "utils.h"
 #include <cmath>
+
+class Axis;
+
 class Encoder
 {
 public:
@@ -45,14 +49,17 @@ public:
     bool abs_spi_start_transaction();
     void abs_spi_cb();
 
+
+
     bool abs_spi_pos_updated_ = false;
 
+    Axis *axis_ = nullptr;
     STM32_SPI *spi_;
     config_t config_;
 
     bool is_ready_ = false;
-    float phase_ = 0.0f;     // [rad]
-    float phase_vel_ = 0.0f; // [rad/s]
+    OutputPort<float> phase_ = 0.0f;     // [rad]
+    OutputPort<float> phase_vel_ = 0.0f; // [rad/s]
 
     float interpolation_ = 0.0f;
     float pos_estimate_counts_ = 0.0f;  // [count]
@@ -65,9 +72,9 @@ public:
     int32_t count_in_cpr_ = 0;
     float pll_kp_ = 0.0f;   // [count/s / count]
     float pll_ki_ = 0.0f;   // [(count/s^2) / count]
-    float pos_estimate_ = 0.0f; // [turn]
-    float vel_estimate_ = 0.0f; // [turn/s]
-    float pos_circular_ = 0.0f; // [turn]
+    OutputPort<float> pos_estimate_ = 0.0f; // [turn]
+    OutputPort<float> vel_estimate_ = 0.0f; // [turn/s]
+    OutputPort<float> pos_circular_ = 0.0f; // [turn]
 
 
     mode_e mode_;

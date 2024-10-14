@@ -2,11 +2,15 @@
 #define _BOARD_H__
 
 #include <stm32f4xx_hal.h>
-#include "gpio.h"
-#include "spi.h"
-#include "dma.h"
-#include "adc.h"
-#include "usb_device.h"
+#include <gpio.h>
+#include <spi.h>
+#include <dma.h>
+#include <adc.h>
+#include <usb_device.h>
+#include <main.h>
+
+#include <arm_math.h>
+#include <stdbool.h>
 
 #define TIM_TIME_BASE TIM14
 

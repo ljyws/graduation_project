@@ -1,9 +1,6 @@
-CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj: \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\drv8301.cpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\drv8301.h \
- D:\my_project\graduation_project\firmware\ctrl\Stm32_Interface/stm32_gpio.h \
- D:\my_project\graduation_project\firmware\ctrl\Core\Inc/gpio.h \
- D:\my_project\graduation_project\firmware\ctrl\Core\Inc/main.h \
+CMakeFiles/ctrl.elf.dir/Ctrl/arm_sin_f32.c.obj: \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl\arm_sin_f32.c \
+ D:\my_project\graduation_project\firmware\ctrl\Core\Inc/board.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/stm32f4xx_hal_conf.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_rcc.h \
@@ -46,47 +43,9 @@ CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj: \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_pcd.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_ll_usb.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_pcd_ex.h \
- D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Device\ST\STM32F4xx\Include/stm32f405xx.h \
- d:\tools\gcc\installfile\10\ 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint-gcc.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\cstdint \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\c++config.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\os_defines.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\cpu_defines.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\pstl\pstl_config.h \
- D:\my_project\graduation_project\firmware\ctrl\Stm32_Interface/stm32_spi.h \
- D:\my_project\graduation_project\firmware\ctrl\Stm32_Interface/stm32_gpio.h \
+ D:\my_project\graduation_project\firmware\ctrl\Core\Inc/gpio.h \
+ D:\my_project\graduation_project\firmware\ctrl\Core\Inc/main.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/spi.h \
- D:\my_project\graduation_project\firmware\ctrl\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2/cmsis_os2.h \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\utils.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tuple \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\utility \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_relops.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_pair.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\move.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\type_traits \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\initializer_list \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\array \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\functexcept.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\exception_defines.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_algobase.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\cpp_type_traits.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\ext\type_traits.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\ext\numeric_traits.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_iterator_base_types.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_iterator_base_funcs.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\concept_check.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\debug\assertions.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_iterator.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\ptr_traits.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\debug\debug.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\predefined_ops.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\range_access.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\iterator_concepts.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\concepts \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\range_cmp.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\uses_allocator.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\invoke.h \
- D:\my_project\graduation_project\firmware\ctrl\Core\Inc/board.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/dma.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/adc.h \
  D:\my_project\graduation_project\firmware\ctrl\USB_DEVICE\App/usb_device.h \
@@ -116,12 +75,9 @@ CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj: \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\sys\sched.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\machine\types.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\sys\stdio.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\stdlib.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\cstdlib \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\stdlib.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\machine\stdlib.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\alloca.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\std_abs.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\string.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\sys\_locale.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\strings.h \
@@ -129,21 +85,7 @@ CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj: \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/main.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Include/arm_math.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Include/core_cm4.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\math.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\cmath \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\math.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\specfun.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\limits \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\gamma.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\special_function_util.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\bessel_function.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\beta_function.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\ell_integral.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\exp_integral.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\hypergeometric.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\legendre_function.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\modified_bessel_func.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\poly_hermite.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\poly_laguerre.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\riemann_zeta.tcc \
- d:\tools\gcc\installfile\10\ 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h
+ d:\tools\gcc\installfile\10\ 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h \
+ D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Include/arm_common_tables.h \
+ D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Include/arm_math.h

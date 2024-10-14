@@ -3,6 +3,8 @@
 #include <array>
 #include <optional>
 
+#include <stdint.h>
+
 using float2D = std::pair<float, float>;
 struct Iph_ABC_t { float phA; float phB; float phC; };
 

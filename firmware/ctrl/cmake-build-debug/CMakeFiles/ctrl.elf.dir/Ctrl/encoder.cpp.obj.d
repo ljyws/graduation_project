@@ -57,8 +57,6 @@ CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj: \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/spi.h \
  D:\my_project\graduation_project\firmware\ctrl\Stm32_Interface/stm32_gpio.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/board.h \
- D:\my_project\graduation_project\firmware\ctrl\Core\Inc/gpio.h \
- D:\my_project\graduation_project\firmware\ctrl\Core\Inc/spi.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/dma.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/adc.h \
  D:\my_project\graduation_project\firmware\ctrl\USB_DEVICE\App/usb_device.h \
@@ -99,7 +97,9 @@ CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj: \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\strings.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\sys\string.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/main.h \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\utils.h \
+ D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Include/arm_math.h \
+ D:\my_project\graduation_project\firmware\ctrl\Drivers\CMSIS\Include/core_cm4.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\math.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\cmath \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\cpp_type_traits.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\ext\type_traits.h \
@@ -133,9 +133,37 @@ CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj: \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\poly_hermite.tcc \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\poly_laguerre.tcc \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tr1\riemann_zeta.tcc \
+ d:\tools\gcc\installfile\10\ 2021.10\lib\gcc\arm-none-eabi\10.3.1\include\stdbool.h \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl\component.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\variant \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\utility \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_relops.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\initializer_list \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\enable_special_members.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\functional_hash.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\hash_bytes.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\invoke.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\ext\aligned_buffer.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\parse_numbers.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\stl_construct.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\new \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\exception \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\exception.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\exception_ptr.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\cxxabi_init_exception.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\typeinfo \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\nested_exception.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\optional \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl\utils.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\tuple \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\array \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\range_access.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\iterator_concepts.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\concepts \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\range_cmp.h \
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\uses_allocator.h \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\chrono \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\ratio \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\ctime \
  d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\time.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\machine\time.h \
- d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\c++\10.3.1\bits\parse_numbers.h
+ d:\tools\gcc\installfile\10\ 2021.10\arm-none-eabi\include\machine\time.h

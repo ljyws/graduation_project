@@ -53,7 +53,13 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+#define TIM_1_8_CLOCK_HZ 168000000
+#define TIM_1_8_PERIOD_CLOCKS 3500
+#define TIM_1_8_DEADTIME_CLOCKS 20
+#define TIM_APB1_CLOCK_HZ 84000000
+#define TIM_APB1_PERIOD_CLOCKS 4096
+#define TIM_APB1_DEADTIME_CLOCKS 40
+#define TIM_1_8_RCR 2
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
