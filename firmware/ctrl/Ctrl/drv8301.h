@@ -29,7 +29,16 @@ public:
         FaultType_GVDD_OV  = (1 << 23)  //!< DRV8301 Vdd Over Voltage fault
     } FaultType_e;
 
-    DRV8301(STM32_SPI *spi,STM32_GPIO cs_gpio, STM32_GPIO enable_gpio, STM32_GPIO nfault_gpio);
+    DRV8301(
+        STM32_SPI *spi_arbiter,
+        STM32_GPIO cs_gpio,
+        STM32_GPIO enable_gpio,
+        STM32_GPIO nfault_gpio)
+            :
+            spi_arbiter_(spi_arbiter),
+            cs_gpio_(cs_gpio),
+            enable_gpio_(enable_gpio),
+            nfault_gpio_(nfault_gpio){}
 
     bool config(float requested_gain, float *actual_gain);
 
@@ -75,7 +84,7 @@ private:
 
     static const SPI_InitTypeDef spi_config_;
 
-    STM32_SPI *spi_;
+    STM32_SPI *spi_arbiter_;
     STM32_GPIO cs_gpio_;
     STM32_GPIO enable_gpio_;
     STM32_GPIO nfault_gpio_;

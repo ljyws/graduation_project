@@ -6,5 +6,5 @@
 
 #IncludeRegexTransform: 
 
-G:/ljyws/graduation_project/firmware/ctrl/Core/Startup/startup_stm32f405rgtx.s
+D:/my_project/graduation_project/firmware/ctrl/Core/Startup/startup_stm32f405rgtx.s
 

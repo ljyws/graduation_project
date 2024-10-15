@@ -16,7 +16,7 @@ bool AlphaBetaFrameController::on_measurement(
             };
     }
 
-    return on_measuerment(vbus_voltage, Ialpha_beta, input_timestamp);
+    return on_measurement(vbus_voltage, Ialpha_beta, input_timestamp);
 }
 
 bool AlphaBetaFrameController::get_output(
@@ -45,7 +45,7 @@ void FOC::reset()
     power_ = 0.0f;
 }
 
-bool FOC::on_measuerment(
+bool FOC::on_measurement(
     std::optional<float> vbus_voltage,
     std::optional<float2D> Ialpha_beta,
     uint32_t input_timestamp)

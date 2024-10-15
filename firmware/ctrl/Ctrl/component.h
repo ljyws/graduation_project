@@ -1,6 +1,10 @@
+#ifndef __COMPONENT_H__
+#define __COMPONENT_H__
+
 #include <stdint.h>
 #include <variant>
 #include <optional>
+
 class ComPonentBase
 {
 public:
@@ -113,3 +117,7 @@ public:
 private:
     std::variant<T, T*, OutputPort<T>*> content_;
 };
+
+
+
+#endif

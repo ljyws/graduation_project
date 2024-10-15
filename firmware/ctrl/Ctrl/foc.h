@@ -12,7 +12,7 @@ public:
 
     void reset() final;
 
-    bool on_measuerment(
+    bool on_measurement(
         std::optional<float> vbus_voltage,
         std::optional<float2D> Ialpha_beta,
         uint32_t input_timestamp) final;

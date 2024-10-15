@@ -4,7 +4,9 @@
 #include "board.h"
 #include "cmsis_os.h"
 
+#include "drv8301.h"
 #include "encoder.h"
+#include "motor.h"
 
 #include "stm32_gpio.h"
 

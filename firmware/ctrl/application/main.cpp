@@ -1,9 +1,19 @@
+
 #include "main_help.h"
 
 STM32_GPIO led_green(LED_GREEN_GPIO_Port,LED_GREEN_Pin);
 
+
 STM32_SPI spi1_arbiter{&hspi1};
-Encoder mt6825(&spi1_arbiter);
+STM32_SPI spi3_arbiter{&hspi3};
+Encoder mt6825 = {&spi1_arbiter};
+DRV8301 driver{
+    &spi3_arbiter,
+    {DRV_CS_GPIO_Port,DRV_CS_Pin},
+    {DRV_EN_GPIO_Port,DRV_EN_Pin},
+    {DRV_FAULT_GPIO_Port,DRV_FAULT_Pin}
+};
+
 uint8_t test_rx;
 uint8_t test_tx = 0x08;
 static void rtos_main(void* arg)

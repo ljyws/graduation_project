@@ -5,12 +5,27 @@
 #include <gpio.h>
 #include <spi.h>
 #include <dma.h>
+#include <tim.h>
 #include <adc.h>
 #include <usb_device.h>
 #include <main.h>
-
+#include "cmsis_os.h"
 #include <arm_math.h>
 #include <stdbool.h>
+
+
+#ifdef __cplusplus
+
+#include "stm32_gpio.h"
+#include "stm32_spi.h"
+#include "drv8301.h"
+
+#include "encoder.h"
+#include "motor.h"
+#include "axis.h"
+
+
+#endif
 
 #define TIM_TIME_BASE TIM14
 

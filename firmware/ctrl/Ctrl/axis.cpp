@@ -1,9 +1,11 @@
 #include "axis.h"
 
-Axis::Axis(Encoder &encoder)
-    : encoder_(encoder)
+Axis::Axis(Encoder &encoder,Motor &motor)
+    : encoder_(encoder),
+      motor_(motor)
 {
     encoder_.axis_ = this;
+    motor_.axis_ = this;
 }
 
 

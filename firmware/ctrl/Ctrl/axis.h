@@ -2,6 +2,7 @@
 #define __AXIS_H__
 
 #include "encoder.h"
+#include "motor.h"
 #include "utils.h"
 
 #include <array>
@@ -52,9 +53,9 @@ public:
         Axis *parent = nullptr;
     }Config_t;
 
-    Axis(
-        Encoder &encoder
-        );
+
+    Axis(Encoder &encoder, Motor &motor);
+
 
     bool apply_config();
     void clear_config();
@@ -65,6 +66,7 @@ public:
 
     Config_t config_;
     Encoder &encoder_;
+    Motor &motor_;
 
 
     error_e error_ = ERROR_NONE;

@@ -78,6 +78,8 @@ void Error_Handler(void);
 #define DRV_MOSI_GPIO_Port GPIOC
 #define DRV_EN_Pin GPIO_PIN_5
 #define DRV_EN_GPIO_Port GPIOB
+#define DRV_FAULT_Pin GPIO_PIN_7
+#define DRV_FAULT_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
