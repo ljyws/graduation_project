@@ -26,6 +26,8 @@ public:
 
     uint16_t get_pin_number(void);
 
+    void attach_gpio(void);
+
     GPIO_TypeDef *port_;
     uint16_t pin_mask_;
 

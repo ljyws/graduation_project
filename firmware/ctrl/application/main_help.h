@@ -4,6 +4,10 @@
 #include "board.h"
 #include "cmsis_os.h"
 
+#include "encoder.h"
+
 #include "stm32_gpio.h"
+
+
 
 #endif

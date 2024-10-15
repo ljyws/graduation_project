@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-Encoder::Encoder(STM32_SPI *enc_spi) : spi_(enc_spi){
+Encoder::Encoder(STM32_SPI *spi) : spi_(spi){
 }
 
 void Encoder::init()
@@ -23,10 +23,9 @@ void Encoder::init()
         .CRCPolynomial = 10,
     };
 
-    if(mode_ & MODE_FLAG_ABS)
+    if(mode_ & MODE_FLAG_MagnTek)
     {
         abs_spi_cs_pin_init();
-
     }
 
 }
@@ -42,23 +41,40 @@ void Encoder::sample_now()
     switch (mode_)
     {
         case MODE_SPI_ABS_MT6816:
-        case MODE_SPI_ABS_MT6825:
-        case MODE_SPI_ABS_AS5047:
         {
+            break;
+        }
+        case MODE_SPI_ABS_MT6825:
+        {
+            abs_spi_dma_tx_[0] = 0x83ff;
+            abs_spi_dma_tx_[1] = 0xffff;
             abs_spi_start_transaction();
             break;
         }
         default:break;
     }
 }
-
+uint16_t rx[2];
 bool Encoder::abs_spi_start_transaction()
 {
-    if(mode_ & MODE_FLAG_ABS)
+    if(mode_ & MODE_FLAG_MagnTek)
     {
+//        uint16_t tx[2] = {0x83ff,0xffff};
+//
+//        spi_task_.cs_gpio.write(false);
+//
+//        HAL_SPI_TransmitReceive(&hspi1,(uint8_t*)&tx[0],(uint8_t*)&rx[0],1,1000);
+//        HAL_SPI_TransmitReceive(&hspi1,(uint8_t*)&tx[1],(uint8_t*)&rx[1],1,1000);
+//
+//        spi_task_.cs_gpio.write(true);
         spi_task_.cs_gpio = spi_abs_cs_gpio_;
-        spi_task_.tx_buf = (uint8_t*)abs_spi_dma_tx_;
-        spi_task_.rx_buf = (uint8_t*)abs_spi_dma_rx_;
+        spi_task_.tx_buf = (uint8_t*)&abs_spi_dma_tx_[0];
+        spi_task_.rx_buf = (uint8_t*)&abs_spi_dma_rx_[0];
+        spi_task_.len = 1;
+        spi_->transfer_async(&spi_task_);
+
+        spi_task_.tx_buf = (uint8_t*)&abs_spi_dma_tx_[1];
+        spi_task_.rx_buf = (uint8_t*)&abs_spi_dma_rx_[1];
         spi_task_.len = 1;
         spi_->transfer_async(&spi_task_);
     }
@@ -67,7 +83,7 @@ bool Encoder::abs_spi_start_transaction()
 
 void Encoder::abs_spi_cb()
 {
-    uint16_t pos;
+    uint32_t pos;
     switch (mode_)
     {
         case MODE_SPI_ABS_MT6816:
@@ -76,16 +92,14 @@ void Encoder::abs_spi_cb()
         }
         case MODE_SPI_ABS_MT6825:
         {
-            break;
-        }
-        case MODE_SPI_ABS_AS5047:
-        {
+            pos = ((abs_spi_dma_rx_[0]&0x00FF)<<10)|((abs_spi_dma_rx_[1]&0xFC00)>>6)|((abs_spi_dma_rx_[1]&0x00F0)>>4);
             break;
         }
         default:break;
     }
 
-
+    pos_abs_ = pos;
+    abs_spi_pos_updated_ = true;
 }
 
 bool Encoder::update()
@@ -97,7 +111,6 @@ bool Encoder::update()
     {
         case MODE_SPI_ABS_MT6816:
         case MODE_SPI_ABS_MT6825:
-        case MODE_SPI_ABS_AS5047:
         {
             // abs_spi_start_transaction();
             break;
@@ -113,7 +126,7 @@ bool Encoder::update()
     count_in_cpr_ += delta_enc;
     count_in_cpr_ = mod(count_in_cpr_,config_.cpr);
 
-    if(mode_ & MODE_FLAG_ABS)
+    if(mode_ & MODE_FLAG_MagnTek)
         count_in_cpr_ = pos_abs_latched;
 
     float pos_cpr_counts_last = pos_cpr_counts_;

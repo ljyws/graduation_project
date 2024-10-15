@@ -1,4 +1,4 @@
-# Install script for directory: D:/my_project/graduation_project/firmware/ctrl
+# Install script for directory: G:/ljyws/graduation_project/firmware/ctrl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

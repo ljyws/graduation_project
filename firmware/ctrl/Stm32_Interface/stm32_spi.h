@@ -22,12 +22,10 @@ public:
 
     bool transfer(SPI_InitTypeDef config, STM32_GPIO cs_gpio, const uint8_t* tx_buf, uint8_t* rx_buf, size_t len, uint32_t timeout_ms);
 
-
-
 private:
     bool start();
     SPI_HandleTypeDef *hspi_;
-    spi_task *task = nullptr;
+    spi_task *task_ = nullptr;
 };
 
 

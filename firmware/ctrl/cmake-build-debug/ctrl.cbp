@@ -128,6 +128,9 @@
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/adc.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/arm_math.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/board.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
@@ -191,10 +194,40 @@
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Startup/startup_stm32f405rgtx.s">
 			<Option target="ctrl.elf"/>
 		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/axis.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/axis.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/component.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/drv8301.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/drv8301.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/encoder.cpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/encoder.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/foc.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/foc.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/phase_control_law.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/utils.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/utils.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h">

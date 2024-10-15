@@ -14,12 +14,11 @@ class Encoder
 {
 public:
 
-    static constexpr uint32_t MODE_FLAG_ABS = 0x100;
+    static constexpr uint32_t MODE_FLAG_MagnTek = 0x100;
     typedef enum
     {
         MODE_SPI_ABS_MT6816 = 256,
         MODE_SPI_ABS_MT6825 = 257,
-        MODE_SPI_ABS_AS5047 = 258,
     }mode_e;
     typedef struct
     {
@@ -33,7 +32,7 @@ public:
         Encoder *parent = nullptr;
     }config_t;
 
-    Encoder(STM32_SPI *enc_spi);
+    Encoder(STM32_SPI *spi);
     void init(void);
     void abs_spi_cs_pin_init(void);
     void update_pll_gains();
@@ -80,9 +79,10 @@ public:
     mode_e mode_;
 
 
-    uint16_t abs_spi_dma_tx_[1] = {0xFFFF};
-    uint16_t abs_spi_dma_rx_[1]{};
-    STM32_GPIO spi_abs_cs_gpio_;
+    uint16_t abs_spi_dma_tx_[2] = {};
+    uint16_t abs_spi_dma_rx_[2] = {};
+
+    STM32_GPIO spi_abs_cs_gpio_{GPIOA,GPIO_PIN_4};
     STM32_SPI::spi_task spi_task_;
 };
 

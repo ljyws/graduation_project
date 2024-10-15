@@ -1,23 +1,22 @@
 #include "stm32_spi.h"
 
-
 bool STM32_SPI::start()
 {
-    task->cs_gpio.write(false);
+    spi_task &task = *task_;
 
     HAL_StatusTypeDef status = HAL_ERROR;
 
-    if (hspi_->hdmatx->State != HAL_DMA_STATE_READY || hspi_->hdmarx->State != HAL_DMA_STATE_READY)
-        status = HAL_BUSY;
-    else if (task->tx_buf && task->rx_buf)
-        status = HAL_SPI_TransmitReceive_DMA(hspi_, (uint8_t*)task->tx_buf, task->rx_buf, task->len);
-    else if (task->tx_buf)
-        status = HAL_SPI_Transmit_DMA(hspi_, (uint8_t*)task->tx_buf, task->len);
-    else if (task->rx_buf)
-        status = HAL_SPI_Receive_DMA(hspi_, task->rx_buf, task->len);
+//    if (hspi_->hdmatx->State != HAL_DMA_STATE_READY || hspi_->hdmarx->State != HAL_DMA_STATE_READY)
+//        status = HAL_BUSY;
+//    else if (task.tx_buf && task.rx_buf)
+    status = HAL_SPI_TransmitReceive(hspi_, (uint8_t*)task.tx_buf, (uint8_t*)task.rx_buf, task.len,100);
+//    else if (task.tx_buf)
+//        status = HAL_SPI_Transmit(hspi_, (uint8_t*)task.tx_buf, task.len,100);
+//    else if (task.rx_buf)
+//        status = HAL_SPI_Receive(hspi_, task.rx_buf, task.len,100);
 
     if (status != HAL_OK)
-        task->cs_gpio.write(true);
+        task.cs_gpio.write(true);
 
     return status == HAL_OK;
 }
@@ -40,4 +39,12 @@ bool STM32_SPI::transfer(SPI_InitTypeDef config, STM32_GPIO cs_gpio, const uint8
         return true;
     else
         return false;
+}
+
+
+void STM32_SPI::transfer_async(spi_task* task)
+{
+    spi_task** ptr = &task_;
+    *ptr = task;
+    start();
 }

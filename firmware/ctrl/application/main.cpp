@@ -2,15 +2,19 @@
 
 STM32_GPIO led_green(LED_GREEN_GPIO_Port,LED_GREEN_Pin);
 
+STM32_SPI spi1_arbiter{&hspi1};
+Encoder mt6825(&spi1_arbiter);
+uint8_t test_rx;
+uint8_t test_tx = 0x08;
 static void rtos_main(void* arg)
 {
     led_green.config(GPIO_MODE_OUTPUT_PP,GPIO_NOPULL,GPIO_SPEED_LOW);
+    mt6825.init();
     for(;;)
     {
-        led_green.write(true);
-        osDelay(500);
-        led_green.write(false);
-        osDelay(500);
+        mt6825.sample_now();
+//        mt6825.abs_spi_cb();
+        osDelay(10);
     }
 }
 
