@@ -152,6 +152,9 @@
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/stm32f4xx_it.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/tim.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/adc.c">
 			<Option target="ctrl.elf"/>
 		</Unit>
@@ -189,6 +192,9 @@
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/system_stm32f4xx.c">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Src/tim.c">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Startup/startup_stm32f405rgtx.s">
@@ -432,6 +438,9 @@
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h">

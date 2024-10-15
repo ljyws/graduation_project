@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Core/Src/sysmem.c.obj.d"
   "CMakeFiles/ctrl.elf.dir/Core/Src/system_stm32f4xx.c.obj"
   "CMakeFiles/ctrl.elf.dir/Core/Src/system_stm32f4xx.c.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.obj"
+  "CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.obj.d"
   "CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj.d"

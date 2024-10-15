@@ -55,6 +55,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/ljyws/graduation_project/firmware/ctrl/Core/Src/syscalls.c" "CMakeFiles/ctrl.elf.dir/Core/Src/syscalls.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Core/Src/syscalls.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Core/Src/sysmem.c" "CMakeFiles/ctrl.elf.dir/Core/Src/sysmem.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Core/Src/sysmem.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Core/Src/system_stm32f4xx.c" "CMakeFiles/ctrl.elf.dir/Core/Src/system_stm32f4xx.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Core/Src/system_stm32f4xx.c.obj.d"
+  "G:/ljyws/graduation_project/firmware/ctrl/Core/Src/tim.c" "CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj.d"

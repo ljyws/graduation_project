@@ -67,6 +67,7 @@ CMakeFiles/ctrl.elf.dir/Core/Src/main.c.obj: \
  G:\ljyws\graduation_project\firmware\ctrl\Core\Inc/main.h \
  G:\ljyws\graduation_project\firmware\ctrl\Core\Inc/dma.h \
  G:\ljyws\graduation_project\firmware\ctrl\Core\Inc/spi.h \
+ G:\ljyws\graduation_project\firmware\ctrl\Core\Inc/tim.h \
  G:\ljyws\graduation_project\firmware\ctrl\USB_DEVICE\App/usb_device.h \
  G:\ljyws\graduation_project\firmware\ctrl\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_def.h \
  G:\ljyws\graduation_project\firmware\ctrl\USB_DEVICE\Target/usbd_conf.h \

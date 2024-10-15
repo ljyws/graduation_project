@@ -440,6 +440,30 @@ Core/Src/system_stm32f4xx.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Core/Src/system_stm32f4xx.c.s
 .PHONY : Core/Src/system_stm32f4xx.c.s
 
+Core/Src/tim.obj: Core/Src/tim.c.obj
+.PHONY : Core/Src/tim.obj
+
+# target to build an object file
+Core/Src/tim.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.obj
+.PHONY : Core/Src/tim.c.obj
+
+Core/Src/tim.i: Core/Src/tim.c.i
+.PHONY : Core/Src/tim.i
+
+# target to preprocess a source file
+Core/Src/tim.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.i
+.PHONY : Core/Src/tim.c.i
+
+Core/Src/tim.s: Core/Src/tim.c.s
+.PHONY : Core/Src/tim.s
+
+# target to generate assembly for a file
+Core/Src/tim.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Core/Src/tim.c.s
+.PHONY : Core/Src/tim.c.s
+
 Core/Startup/startup_stm32f405rgtx.obj: Core/Startup/startup_stm32f405rgtx.s.obj
 .PHONY : Core/Startup/startup_stm32f405rgtx.obj
 
@@ -1648,6 +1672,9 @@ help:
 	@echo ... Core/Src/system_stm32f4xx.obj
 	@echo ... Core/Src/system_stm32f4xx.i
 	@echo ... Core/Src/system_stm32f4xx.s
+	@echo ... Core/Src/tim.obj
+	@echo ... Core/Src/tim.i
+	@echo ... Core/Src/tim.s
 	@echo ... Core/Startup/startup_stm32f405rgtx.obj
 	@echo ... Ctrl/axis.obj
 	@echo ... Ctrl/axis.i
