@@ -1,5 +1,5 @@
-#include "utils.h"
-#include "cmath"
+#include "utils.hpp"
+#include "board.h"
 
 
 int mod(const int dividend, const int divisor)

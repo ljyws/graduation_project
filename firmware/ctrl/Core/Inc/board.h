@@ -1,6 +1,9 @@
 #ifndef _BOARD_H__
 #define _BOARD_H__
 
+#include <stdbool.h>
+#include <string>
+
 #include <stm32f4xx_hal.h>
 #include <gpio.h>
 #include <spi.h>
@@ -11,18 +14,21 @@
 #include <main.h>
 #include "cmsis_os.h"
 #include <arm_math.h>
-#include <stdbool.h>
+
 
 
 #ifdef __cplusplus
 
+#include "utils.hpp"
 #include "stm32_gpio.h"
 #include "stm32_spi.h"
-#include "drv8301.h"
+#include "drv8301.hpp"
 
-#include "encoder.h"
-#include "motor.h"
-#include "axis.h"
+using TGateDriver = DRV8301;
+using TOpAmp = DRV8301;
+
+
+#include "motor.hpp"
 
 
 #endif

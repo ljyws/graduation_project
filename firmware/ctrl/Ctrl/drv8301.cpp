@@ -1,7 +1,7 @@
-#include "drv8301.h"
+#include "drv8301.hpp"
 
 #include "cmsis_os2.h"
-#include "utils.h"
+#include "utils.hpp"
 
 const SPI_InitTypeDef DRV8301::spi_config_ = {
     .Mode = SPI_MODE_MASTER,

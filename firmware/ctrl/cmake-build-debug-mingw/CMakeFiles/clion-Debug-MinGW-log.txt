@@ -1,0 +1,5 @@
+"D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -S D:\my_project\graduation_project\firmware\ctrl -B D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug-mingw
+-- Minimal optimization, debug info included
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug-mingw

@@ -1,4 +1,6 @@
-#include "motor.h"
+#include "motor.hpp"
+#include "axis.hpp"
+#include "main_help.h"
 
 struct ResistanceMeasurementControlLaw : AlphaBetaFrameController
 {

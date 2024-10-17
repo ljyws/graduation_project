@@ -13,6 +13,7 @@ set(CMAKE_OBJDUMP arm-none-eabi-objdump)
 set(SIZE arm-none-eabi-size)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
+
 # project settings
 project(ctrl C CXX ASM)
 set(CMAKE_CXX_STANDARD 17)

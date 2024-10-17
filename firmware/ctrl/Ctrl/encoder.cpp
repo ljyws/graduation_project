@@ -1,6 +1,4 @@
-#include "encoder.h"
-
-#include <chrono>
+#include "main_help.h"
 
 Encoder::Encoder(STM32_SPI *spi) : spi_(spi){
 }

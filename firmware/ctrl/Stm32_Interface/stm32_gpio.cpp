@@ -1,5 +1,6 @@
 #include "stm32_gpio.h"
 
+
 bool STM32_GPIO::config(uint32_t mode, uint32_t pull, uint32_t speed)
 {
     if (port_ == GPIOA)

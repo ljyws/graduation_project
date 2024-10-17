@@ -1,0 +1,7 @@
+"D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "NMake Makefiles" -S D:\my_project\graduation_project\firmware\ctrl -B D:\my_project\graduation_project\firmware\ctrl\cmake-build-release
+-- Maximum optimization for speed
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/my_project/graduation_project/firmware/ctrl/cmake-build-release
+CMake 使用的 C 编译器 GCC 与配置的工具链 Visual Studio 不兼容。 配置配置文件…
+CMake 使用的 C++ 编译器 GCC 与配置的工具链 Visual Studio 不兼容。 配置配置文件…
