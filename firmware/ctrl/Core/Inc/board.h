@@ -15,6 +15,8 @@
 #include "cmsis_os.h"
 #include <arm_math.h>
 
+#define SHUNT_RESISTANCE (500e-6f)
+
 
 
 #ifdef __cplusplus
@@ -29,6 +31,12 @@ using TOpAmp = DRV8301;
 
 
 #include "motor.hpp"
+#include "encoder.hpp"
+
+extern Motor motor;
+extern Encoder mt6825;
+extern DRV8301 driver;
+
 
 
 #endif

@@ -102,6 +102,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/drv8301.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/encoder.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/foc.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj.d"
+  "D:/my_project/graduation_project/firmware/ctrl/Ctrl/low_level.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/motor.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Ctrl/utils.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj.d"
   "D:/my_project/graduation_project/firmware/ctrl/Stm32_Interface/stm32_gpio.cpp" "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_gpio.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_gpio.cpp.obj.d"

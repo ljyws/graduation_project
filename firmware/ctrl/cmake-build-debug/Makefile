@@ -592,6 +592,30 @@ Ctrl/foc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.s
 .PHONY : Ctrl/foc.cpp.s
 
+Ctrl/low_level.obj: Ctrl/low_level.cpp.obj
+.PHONY : Ctrl/low_level.obj
+
+# target to build an object file
+Ctrl/low_level.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.obj
+.PHONY : Ctrl/low_level.cpp.obj
+
+Ctrl/low_level.i: Ctrl/low_level.cpp.i
+.PHONY : Ctrl/low_level.i
+
+# target to preprocess a source file
+Ctrl/low_level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.i
+.PHONY : Ctrl/low_level.cpp.i
+
+Ctrl/low_level.s: Ctrl/low_level.cpp.s
+.PHONY : Ctrl/low_level.s
+
+# target to generate assembly for a file
+Ctrl/low_level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.s
+.PHONY : Ctrl/low_level.cpp.s
+
 Ctrl/motor.obj: Ctrl/motor.cpp.obj
 .PHONY : Ctrl/motor.obj
 
@@ -1715,6 +1739,9 @@ help:
 	@echo ... Ctrl/foc.obj
 	@echo ... Ctrl/foc.i
 	@echo ... Ctrl/foc.s
+	@echo ... Ctrl/low_level.obj
+	@echo ... Ctrl/low_level.i
+	@echo ... Ctrl/low_level.s
 	@echo ... Ctrl/motor.obj
 	@echo ... Ctrl/motor.i
 	@echo ... Ctrl/motor.s

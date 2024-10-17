@@ -38,6 +38,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj"

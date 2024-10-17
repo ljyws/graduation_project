@@ -200,8 +200,8 @@ CMakeFiles/ctrl.elf.dir/Core/Src/board.cpp.obj: \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\variant \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\aligned_buffer.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\parse_numbers.h \
- D:\my_project\graduation_project\firmware\ctrl\Application/main_help.h \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/utils.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Application/main_help.h \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/axis.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp

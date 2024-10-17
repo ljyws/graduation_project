@@ -188,22 +188,24 @@ CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj: \
  D:\my_project\graduation_project\firmware\ctrl\Stm32_Interface/stm32_gpio.h \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/drv8301.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/motor.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\foc.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\phase_control_law.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/utils.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/component.hpp \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\variant \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\enable_special_members.h \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\aligned_buffer.h \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\parse_numbers.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\optional \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\exception \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\exception_ptr.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\cxxabi_init_exception.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\typeinfo \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\nested_exception.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\enable_special_members.h \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl\foc.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl\phase_control_law.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl\component.hpp \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\variant \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\aligned_buffer.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\parse_numbers.h \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl\axis.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl\encoder.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl\utils.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Application/main_help.h \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/axis.hpp

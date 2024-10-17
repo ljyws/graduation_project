@@ -200,4 +200,7 @@ CMakeFiles/ctrl.elf.dir/Ctrl/foc.cpp.obj: \
  D:\my_project\graduation_project\firmware\ctrl\Stm32_Interface/stm32_gpio.h \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/drv8301.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/motor.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl/foc.hpp
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/foc.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/utils.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/component.hpp
