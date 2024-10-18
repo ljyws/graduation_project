@@ -1,5 +1,6 @@
 #include "foc.hpp"
 #include "board.h"
+#include "utils.hpp"
 
 bool AlphaBetaFrameController::on_measurement(
     std::optional<float> vbus_voltage,

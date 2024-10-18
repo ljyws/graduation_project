@@ -13,7 +13,8 @@
 #include <usb_device.h>
 #include <main.h>
 #include "cmsis_os.h"
-#include <arm_math.h>
+
+#include "arm_math.h"
 
 #define SHUNT_RESISTANCE (500e-6f)
 

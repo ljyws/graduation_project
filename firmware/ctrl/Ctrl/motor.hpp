@@ -1,12 +1,14 @@
 #ifndef __MOTOR_H__
 #define __MOTOR_H__
 
+class Axis;
+class Motor;
+
+
 #include "board.h"
 #include "foc.hpp"
 
 
-class Axis;
-class Motor;
 
 class Motor
 {

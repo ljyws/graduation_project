@@ -42,6 +42,7 @@
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/ARM/DSP/Inc"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Application"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Ctrl"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"/>
@@ -84,6 +85,7 @@
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/USB_DEVICE/Target"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/ARM/DSP/Inc"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Application"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Ctrl"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"/>
@@ -122,6 +124,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/.idea/Core.iml">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/.idea/editor.xml">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/.idea/misc.xml">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/.idea/modules.xml">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/.idea/vcs.xml">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/.idea/workspace.xml">
+			<Option target="ctrl.elf"/>
+		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Core/Inc/FreeRTOSConfig.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
@@ -203,37 +223,49 @@
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/axis.cpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/axis.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/axis.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/component.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/component.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/drv8301.cpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/drv8301.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/drv8301.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/encoder.cpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/encoder.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/encoder.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/foc.cpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/foc.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/foc.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/phase_control_law.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/low_level.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/low_level.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/motor.cpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/motor.hpp">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/phase_control_law.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/utils.cpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
-		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/utils.h">
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Ctrl/utils.hpp">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h">
@@ -518,6 +550,12 @@
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c">
 			<Option target="ctrl.elf"/>
 		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/ARM/DSP/Inc/arm_math.h">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a">
+			<Option target="ctrl.elf"/>
+		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h">
 			<Option target="ctrl.elf"/>
 		</Unit>
@@ -546,6 +584,9 @@
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/ST/STM32_USB_Device_Library/LICENSE.txt">
+			<Option target="ctrl.elf"/>
+		</Unit>
+		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/ARM/DSP/LICENSE.txt">
 			<Option target="ctrl.elf"/>
 		</Unit>
 		<Unit filename="G:/ljyws/graduation_project/firmware/ctrl/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h">
