@@ -15,6 +15,11 @@
 #define two_by_sqrt3 (1.15470053838f)
 #define sqrt3_by_2 (0.86602540378f)
 
+__attribute__((optimize("-fno-finite-math-only")))
+inline bool is_nan(float x) {
+    return __builtin_isnan(x);
+}
+
 int mod(const int dividend, const int divisor);
 float fmodf_pos(float x, float y);
 float wrap_pm(float x, float pm_range);

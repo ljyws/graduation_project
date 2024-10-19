@@ -17,11 +17,10 @@ public:
 
     virtual bool on_measurement(
         std::optional<float> vbus_voltage,
-        std::optional<std::array<float,N_PHASE>> currents,
-        uint32_t input_timestamp) = 0;
+        std::optional<std::array<float,N_PHASE>> currents
+        ) = 0;
 
     virtual bool get_output(
-        uint32_t output_timestamp,
         float (&pwm_timings)[N_PHASE],
         std::optional<float> *ibus
     ) = 0;
@@ -34,11 +33,10 @@ class AlphaBetaFrameController : public PhaseControlLaw<3>
 private:
     bool on_measurement(
         std::optional<float> vbus_voltage,
-        std::optional<std::array<float, 3>> currents,
-        uint32_t input_timestamp) final;
+        std::optional<std::array<float, 3>> currents
+        ) final;
 
     bool get_output(
-        uint32_t output_timestamp,
         float(&pwm_timings)[3],
         std::optional<float> *ibus) final;
 
@@ -46,12 +44,10 @@ protected:
 
     virtual bool on_measurement(
         std::optional<float> vbus_voltage,
-        std::optional<float2D> Ialpha_beta,
-        uint32_t input_timestamp
+        std::optional<float2D> Ialpha_beta
     ) = 0;
 
     virtual bool get_alpha_beta_output(
-        uint32_t output_timestamp,
         std::optional<float2D> *mod_alpha_beta,
         std::optional<float> *ibus
     ) = 0;

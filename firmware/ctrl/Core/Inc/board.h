@@ -2,7 +2,6 @@
 #define _BOARD_H__
 
 #include <stdbool.h>
-#include <string>
 
 #include <stm32f4xx_hal.h>
 #include <gpio.h>
@@ -11,13 +10,14 @@
 #include <tim.h>
 #include <adc.h>
 #include <usb_device.h>
+#include <usbd_cdc_if.h>
 #include <main.h>
 #include "cmsis_os.h"
 
 #include "arm_math.h"
+#include "vofa.h"
 
 #define SHUNT_RESISTANCE (500e-6f)
-
 
 
 #ifdef __cplusplus
@@ -34,8 +34,10 @@ using TOpAmp = DRV8301;
 #include "motor.hpp"
 #include "encoder.hpp"
 
+
+extern Axis axis;
 extern Motor motor;
-extern Encoder mt6825;
+extern Encoder encoder;
 extern DRV8301 driver;
 
 
@@ -56,5 +58,16 @@ void system_init();
 bool board_init();
 void start_timers();
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+void control_loop_irq_handler(void);
+
+
+#ifdef __cplusplus
+}
+
+#endif
 
 #endif

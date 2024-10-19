@@ -1,7 +1,7 @@
 #此文件从模板自动生成! 请勿更改!
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.29)
 
 # specify cross-compilers and tools
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
@@ -23,6 +23,11 @@ set(CMAKE_C_STANDARD 11)
 add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
 add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
+
+#DSP
+link_directories(Middlewares/ST/ARM/DSP/Lib)
+link_libraries(libarm_cortexM4lf_math.a)
+
 
 #Uncomment for software floating point
 #add_compile_options(-mfloat-abi=soft)
@@ -54,6 +59,8 @@ include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_
                    Application
                    Ctrl
                    Stm32_Interface
+                   Communication
+                   Tools
                    )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx)
@@ -61,7 +68,9 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx)
 file(GLOB_RECURSE SOURCES "Library/*.*" "Core/*.*" "Middlewares/*.*" "Drivers/*.*" "USB_DEVICE/*.*"
                           "Application/*.*"
                           "Ctrl/*.*"
-                          "Stm32_Interface/*.*")
+                          "Stm32_Interface/*.*"
+                          "Communication/*.*"
+                          "Tools/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F405RGTX_FLASH.ld)
 

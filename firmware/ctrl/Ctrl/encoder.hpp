@@ -39,6 +39,7 @@ public:
 
     bool update();
 
+    bool run_offset_calibration();
 
 
     int32_t pos_abs_ = 0;

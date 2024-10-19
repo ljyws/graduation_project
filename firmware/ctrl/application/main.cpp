@@ -3,20 +3,23 @@
 
 STM32_GPIO led_green(LED_GREEN_GPIO_Port,LED_GREEN_Pin);
 
-
-
-
 uint8_t test_rx;
 uint8_t test_tx = 0x08;
+
 static void rtos_main(void* arg)
 {
     led_green.config(GPIO_MODE_OUTPUT_PP,GPIO_NOPULL,GPIO_SPEED_LOW);
+    // axis.motor_.init();
+    axis.encoder_.init();
+    start_adc_pwm();
     for(;;)
     {
-//        mt6825.abs_spi_cb();
+        vofa_start();
+
         osDelay(10);
     }
 }
+
 
 extern "C" int main(void)
 {

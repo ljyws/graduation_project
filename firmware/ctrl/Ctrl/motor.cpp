@@ -1,4 +1,7 @@
 #include "motor.hpp"
+
+#include <pstl/utils.h>
+
 #include "axis.hpp"
 #include "main_help.h"
 
@@ -12,8 +15,7 @@ struct ResistanceMeasurementControlLaw : AlphaBetaFrameController
 
     bool on_measurement(
         std::optional<float> vbus_voltage,
-        std::optional<float2D> Ialpha_beta,
-        uint32_t input_timestamp) final
+        std::optional<float2D> Ialpha_beta) final
     {
         if(Ialpha_beta.has_value())
         {
@@ -42,7 +44,6 @@ struct ResistanceMeasurementControlLaw : AlphaBetaFrameController
     }
 
     bool get_alpha_beta_output(
-        uint32_t output_timestamp,
         std::optional<float2D> *mod_alpha_beta,
         std::optional<float> *ibus) final
     {
@@ -87,8 +88,7 @@ struct InductanceMeasurementControlLaw : AlphaBetaFrameController
 
     bool on_measurement(
             std::optional<float> vbus_voltage,
-            std::optional<float2D> Ialpha_beta,
-            uint32_t input_timestamp) final
+            std::optional<float2D> Ialpha_beta) final
     {
         if (!Ialpha_beta.has_value())
         {
@@ -103,18 +103,16 @@ struct InductanceMeasurementControlLaw : AlphaBetaFrameController
             deltaI_ += -sign * (Ialpha - last_Ialpha_);
         } else
         {
-            start_timestamp_ = input_timestamp;
             attached_ = true;
         }
 
         last_Ialpha_ = Ialpha;
-        last_input_timestamp_ = input_timestamp;
 
         return false;
     }
 
     bool get_alpha_beta_output(
-            uint32_t output_timestamp, std::optional<float2D>* mod_alpha_beta,
+            std::optional<float2D>* mod_alpha_beta,
             std::optional<float>* ibus) final
     {
         test_voltage_ *= -1.0f;
@@ -237,6 +235,84 @@ bool Motor::init()
         return false;
 
     return true;
+}
+
+
+bool Motor::measure_phase_resistance(float test_current, float max_voltage)
+{
+    ResistanceMeasurementControlLaw control_law;
+    control_law.target_current_ = test_current;
+    control_law.max_voltage_ = max_voltage;
+
+    arm(&control_law);
+    for (size_t i = 0; i < 3000; ++i)
+    {
+        osDelay(1);
+    }
+    bool success = is_armed_;
+    disarm();
+
+    config_.phase_resistance = control_law.get_resistance();
+    if (is_nan(config_.phase_resistance))
+    {
+        success = false;
+    }
+
+    float I_beta = control_law.get_Ibeta();
+    if (is_nan(I_beta) || (abs(I_beta) / test_current) > 0.1f)
+    {
+        success = false;
+    }
+
+    return success;
+}
+
+
+bool Motor::measure_phase_inductance(float test_voltage)
+{
+    InductanceMeasurementControlLaw control_law;
+    control_law.test_voltage_ = test_voltage;
+
+    arm(&control_law);
+
+    for (size_t i = 0; i < 1250; ++i)
+    {
+        osDelay(1);
+    }
+
+    bool success = is_armed_;
+
+    disarm();
+
+    config_.phase_inductance = control_law.get_inductance();
+
+    // TODO arbitrary values set for now
+    if (!(config_.phase_inductance >= 2e-6f && config_.phase_inductance <= 4000e-6f))
+    {
+        success = false;
+    }
+
+    return success;
+}
+
+bool Motor::run_calibration()
+{
+    float R_calib_max_voltage = config_.resistance_calib_max_voltage;
+        if (!measure_phase_resistance(config_.calibration_current, R_calib_max_voltage))
+            return false;
+        if (!measure_phase_inductance(R_calib_max_voltage))
+            return false;
+
+    update_current_controller_gains();
+
+    is_calibrated_ = true;
+    return true;
+}
+
+
+void Motor::current_meas_cb(uint32_t timestamp, std::optional<Iph_ABC_t> current)
+{
+
 }
 
 

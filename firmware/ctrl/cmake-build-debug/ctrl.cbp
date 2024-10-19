@@ -11,10 +11,10 @@
 				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ctrl.elf">
@@ -46,18 +46,18 @@
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Application"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Ctrl"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/arm-none-eabi"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/backward"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/include"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/include-fixed"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 ctrl.elf"/>
-					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 ctrl.elf"/>
+					<CompileFile command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ctrl.elf/fast">
@@ -89,38 +89,38 @@
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Application"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Ctrl"/>
 					<Add directory="G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
-					<Add directory="d:\tools\gcc-arm-none-eabi\10 2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/arm-none-eabi"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/c++/13.3.1/backward"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/include"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/include-fixed"/>
+					<Add directory="D:/Tools/arm-none-eabi-13/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 ctrl.elf/fast"/>
-					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 ctrl.elf/fast"/>
+					<CompileFile command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Clion/InstallFile/CLion 2023.3.4/bin/mingw/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Tools/mingwv12/mingw64/bin/mingw32-make.exe -f &quot;G:/ljyws/graduation_project/firmware/ctrl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>

@@ -1,3 +1,0 @@
-D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug-visual-studio/CMakeFiles/ctrl.elf.dir
-D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug-visual-studio/CMakeFiles/edit_cache.dir
-D:/my_project/graduation_project/firmware/ctrl/cmake-build-debug-visual-studio/CMakeFiles/rebuild_cache.dir

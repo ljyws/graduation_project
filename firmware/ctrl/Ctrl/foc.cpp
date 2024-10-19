@@ -4,8 +4,7 @@
 
 bool AlphaBetaFrameController::on_measurement(
     std::optional<float> vbus_voltage,
-    std::optional<std::array<float, 3> > currents,
-    uint32_t input_timestamp)
+    std::optional<std::array<float, 3> > currents)
 {
     std::optional<float2D> Ialpha_beta;
     if(currents.has_value())
@@ -17,16 +16,15 @@ bool AlphaBetaFrameController::on_measurement(
             };
     }
 
-    return on_measurement(vbus_voltage, Ialpha_beta, input_timestamp);
+    return on_measurement(vbus_voltage, Ialpha_beta);
 }
 
 bool AlphaBetaFrameController::get_output(
-    uint32_t output_timestamp,
     float (&pwm_timings)[3],
     std::optional<float> *ibus)
 {
     std::optional<float2D> mod_alpha_beta;
-    get_alpha_beta_output(output_timestamp,&mod_alpha_beta,ibus);
+    get_alpha_beta_output(&mod_alpha_beta,ibus);
 
     auto [tA, tB, tC, success] = SVM(mod_alpha_beta->first, mod_alpha_beta->second);
 
@@ -48,18 +46,16 @@ void FOC::reset()
 
 bool FOC::on_measurement(
     std::optional<float> vbus_voltage,
-    std::optional<float2D> Ialpha_beta,
-    uint32_t input_timestamp)
+    std::optional<float2D> Ialpha_beta)
 {
-    i_timestamp_ = input_timestamp;
     vbus_voltage_measured_ = vbus_voltage;
     Ialpha_beta_measured_ = Ialpha_beta;
 
     return 0;
 }
 
+
 bool FOC::get_alpha_beta_output(
-    uint32_t output_timestamp,
     std::optional<float2D> *mod_alpha_beta,
     std::optional<float> *ibus)
 {
@@ -133,7 +129,7 @@ bool FOC::get_alpha_beta_output(
     }
 
     // Inverse park transform
-    float pwm_phase = phase + phase_vel * ((float)(int32_t)(output_timestamp - ctrl_timestamp_) / (float)TIM_1_8_CLOCK_HZ);
+    float pwm_phase = phase + phase_vel * ((float)(int32_t)ctrl_timestamp_) / (float)TIM_1_8_CLOCK_HZ;
     float c_p = arm_cos_f32(pwm_phase);
     float s_p = arm_sin_f32(pwm_phase);
     float mod_alpha = c_p * mod_d - s_p * mod_q;

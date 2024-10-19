@@ -118,6 +118,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_gpio.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_spi.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_spi.cpp.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Tools/vofa.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/Tools/vofa.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/USB_DEVICE/App/usb_device.c.obj"
   "CMakeFiles/ctrl.elf.dir/USB_DEVICE/App/usb_device.c.obj.d"
   "CMakeFiles/ctrl.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj"

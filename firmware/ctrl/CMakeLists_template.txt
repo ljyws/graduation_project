@@ -23,6 +23,11 @@ add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
 add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 
+#DSP
+link_directories(Middlewares/ST/ARM/DSP/Lib)
+link_libraries(libarm_cortexM4lf_math.a)
+
+
 #Uncomment for software floating point
 #add_compile_options(-mfloat-abi=soft)
 
@@ -53,6 +58,8 @@ include_directories(${includes}
                    Application
                    Ctrl
                    Stm32_Interface
+                   Communication
+                   Tools
                    )
 
 add_definitions(${defines})
@@ -60,7 +67,9 @@ add_definitions(${defines})
 file(GLOB_RECURSE SOURCES ${sources}
                           "Application/*.*"
                           "Ctrl/*.*"
-                          "Stm32_Interface/*.*")
+                          "Stm32_Interface/*.*"
+                          "Communication/*.*"
+                          "Tools/*.*")
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 

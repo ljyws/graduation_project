@@ -27,7 +27,8 @@ void start_adc_pwm()
 
     osDelay(2);
 
-    // start_timer();
+
+    start_timers();
 
 
 }

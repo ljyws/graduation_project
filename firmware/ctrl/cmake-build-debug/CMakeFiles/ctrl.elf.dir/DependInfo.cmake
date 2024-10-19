@@ -40,6 +40,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "G:/ljyws/graduation_project/firmware/ctrl/Application"
   "G:/ljyws/graduation_project/firmware/ctrl/Ctrl"
   "G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface"
+  "G:/ljyws/graduation_project/firmware/ctrl/Communication"
+  "G:/ljyws/graduation_project/firmware/ctrl/Tools"
   )
 
 # The set of dependency files which are needed:
@@ -107,11 +109,16 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/ljyws/graduation_project/firmware/ctrl/Ctrl/utils.cpp" "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface/stm32_gpio.cpp" "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_gpio.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_gpio.cpp.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/Stm32_Interface/stm32_spi.cpp" "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_spi.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Stm32_Interface/stm32_spi.cpp.obj.d"
+  "G:/ljyws/graduation_project/firmware/ctrl/Tools/vofa.cpp" "CMakeFiles/ctrl.elf.dir/Tools/vofa.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/Tools/vofa.cpp.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl/application/main.cpp" "CMakeFiles/ctrl.elf.dir/application/main.cpp.obj" "gcc" "CMakeFiles/ctrl.elf.dir/application/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

@@ -61,7 +61,7 @@ public:
     void clear_config();
 
     void start_thread();
-
+    bool run_closed_loop_control_loop();
     void run_state_machine_loop();
 
     Config_t config_;
@@ -71,7 +71,7 @@ public:
 
     error_e error_ = ERROR_NONE;
 
-    axis_state_e requested = AXIS_STATE_STARTUP_SEQUENCE;
+    axis_state_e requested_state_ = AXIS_STATE_STARTUP_SEQUENCE;
     std::array<axis_state_e, 10> task_chain_ = {AXIS_STATE_UNDEFINED};
     axis_state_e &current_state_ = task_chain_.front();
 

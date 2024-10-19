@@ -49,6 +49,7 @@ public:
     {
         bool pre_calibrated = false;
         int32_t pole_pairs = 7;
+        float calibration_current = 10.0f;
         float resistance_calib_max_voltage = 2.0f; // [V] - You may need to increase this if this voltage isn't sufficient to drive calibration_current through the motor.
         float phase_inductance = 0.0f;        // to be set by measure_phase_inductance
         float phase_resistance = 0.0f;        // to be set by measure_phase_resistance
@@ -105,6 +106,8 @@ public:
 
     bool is_armed_ = false;
     bool is_calibrated = false;
+    bool is_calibrated_ = false;
+
     std::optional<Iph_ABC_t> current_meas_;
     Iph_ABC_t dc_calib_ = {0.0f, 0.0f, 0.0f};
     float I_bus_ = 0.0f;

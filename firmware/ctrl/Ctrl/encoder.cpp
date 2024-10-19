@@ -57,23 +57,10 @@ bool Encoder::abs_spi_start_transaction()
 {
     if(mode_ & MODE_FLAG_MagnTek)
     {
-//        uint16_t tx[2] = {0x83ff,0xffff};
-//
-//        spi_task_.cs_gpio.write(false);
-//
-//        HAL_SPI_TransmitReceive(&hspi1,(uint8_t*)&tx[0],(uint8_t*)&rx[0],1,1000);
-//        HAL_SPI_TransmitReceive(&hspi1,(uint8_t*)&tx[1],(uint8_t*)&rx[1],1,1000);
-//
-//        spi_task_.cs_gpio.write(true);
         spi_task_.cs_gpio = spi_abs_cs_gpio_;
-        spi_task_.tx_buf = (uint8_t*)&abs_spi_dma_tx_[0];
-        spi_task_.rx_buf = (uint8_t*)&abs_spi_dma_rx_[0];
-        spi_task_.len = 1;
-        spi_->transfer_async(&spi_task_);
-
-        spi_task_.tx_buf = (uint8_t*)&abs_spi_dma_tx_[1];
-        spi_task_.rx_buf = (uint8_t*)&abs_spi_dma_rx_[1];
-        spi_task_.len = 1;
+        spi_task_.tx_buf = (uint8_t*)&abs_spi_dma_tx_;
+        spi_task_.rx_buf = (uint8_t*)&abs_spi_dma_rx_;
+        spi_task_.len = 2;
         spi_->transfer_async(&spi_task_);
     }
     return true;
