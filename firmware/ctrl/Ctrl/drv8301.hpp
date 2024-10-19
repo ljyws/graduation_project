@@ -4,9 +4,10 @@
 
 #include "stm32_gpio.h"
 #include "stm32_spi.h"
+#include "gate_driver.hpp"
 
 
-class DRV8301
+class DRV8301 : public GateDriverBase, public OpAmpBase
 {
 public:
     typedef enum : uint32_t {
@@ -46,10 +47,21 @@ public:
 
     void do_check(void);
 
-    bool is_ready();
+    bool is_ready() final;
+
+    bool set_enabled(bool enabled) final {return true;}
 
     FaultType_e get_error();
 
+    float get_midpoint() final
+    {
+        return  0.5f;
+    }
+
+    float get_max_output_swing() final
+    {
+        return 1.35f / 1.65f;
+    }
 private:
     enum CtrlMode_e
     {

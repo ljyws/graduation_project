@@ -68,7 +68,7 @@ public:
     Encoder& encoder_;
     Motor& motor_;
 
-
+    volatile bool thread_id_valid_ = false;
     error_e error_ = ERROR_NONE;
 
     axis_state_e requested_state_ = AXIS_STATE_STARTUP_SEQUENCE;

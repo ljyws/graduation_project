@@ -8,7 +8,7 @@ class FOC : public AlphaBetaFrameController, public ComPonentBase
 {
 public:
 
-    void update(uint32_t timestamp) final;
+    void update() final;
 
     void reset() final;
 

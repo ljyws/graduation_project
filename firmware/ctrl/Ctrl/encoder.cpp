@@ -180,3 +180,8 @@ void Encoder::abs_spi_cs_pin_init()
     spi_abs_cs_gpio_.config(GPIO_MODE_OUTPUT_PP,GPIO_PULLUP,GPIO_SPEED_LOW);
     spi_abs_cs_gpio_.write(true);
 }
+
+bool Encoder::run_offset_calibration()
+{
+    return true;
+}

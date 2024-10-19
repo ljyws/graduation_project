@@ -20,6 +20,24 @@ void Axis::clear_config()
     config_ = {};
 }
 
+static void run_state_machine_loop_wrapper(void* ctx) {
+    reinterpret_cast<Axis*>(ctx)->run_state_machine_loop();
+    reinterpret_cast<Axis*>(ctx)->thread_id_valid_ = false;
+}
+
+void Axis::start_thread()
+{
+    osThreadId_t AxisMainTaskHandle;
+    const osThreadAttr_t axisMainTask_attributes = {
+        .name = "rtos_main_task",
+        .stack_size = 2048 * 4,
+        .priority = (osPriority_t) osPriorityNormal,
+};
+    AxisMainTaskHandle = osThreadNew(run_state_machine_loop_wrapper, NULL, &axisMainTask_attributes);
+    thread_id_valid_ = true;
+}
+
+
 
 bool Axis::run_closed_loop_control_loop()
 {

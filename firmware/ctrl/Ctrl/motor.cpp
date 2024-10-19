@@ -1,9 +1,16 @@
 #include "motor.hpp"
 
 #include <pstl/utils.h>
+#include <sys/stat.h>
 
 #include "axis.hpp"
 #include "main_help.h"
+
+
+static constexpr auto CURRENT_ADC_LOWER_BOUND =        (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MIN_VOLT / 3.3f);
+static constexpr auto CURRENT_ADC_UPPER_BOUND =        (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MAX_VOLT / 3.3f);
+
+
 
 struct ResistanceMeasurementControlLaw : AlphaBetaFrameController
 {
@@ -172,9 +179,9 @@ void Motor::apply_pwm_timings(uint16_t timings[3], bool tentative)
     TIM_HandleTypeDef *htim = timer_;
     TIM_TypeDef *tim = htim->Instance;
 
-    tim->CCR1 = timings[0];
-    tim->CCR2 = timings[1];
-    tim->CCR3 = timings[2];
+    // tim->CCR1 = timings[0];
+    // tim->CCR2 = timings[1];
+    // tim->CCR3 = timings[2];
 
 
 }
@@ -236,6 +243,21 @@ bool Motor::init()
 
     return true;
 }
+
+std::optional<float> Motor::phase_current_from_adcval(uint32_t adc_value)
+{
+    if(adc_value < CURRENT_ADC_LOWER_BOUND || adc_value > CURRENT_ADC_UPPER_BOUND)
+    {
+        return std::nullopt;
+    }
+
+    int adcval_bal = (int)adc_value - (2048);
+    float amp_out_volt = (3.3f / (float)(4096)) * (float)adcval_bal;
+    float shunt_volt = amp_out_volt * phase_current_rev_gain_;
+    float current = shunt_volt * shunt_conductance_;
+    return current;
+}
+
 
 
 bool Motor::measure_phase_resistance(float test_current, float max_voltage)
@@ -310,13 +332,142 @@ bool Motor::run_calibration()
 }
 
 
-void Motor::current_meas_cb(uint32_t timestamp, std::optional<Iph_ABC_t> current)
+void Motor::current_meas_cb(std::optional<Iph_ABC_t> current)
 {
+    bool dc_calib_valid = (dc_calib_running_since_ >= config_.dc_calib_tau * 7.5f)
+                       && (abs(dc_calib_.phA) < max_dc_calib_)
+                       && (abs(dc_calib_.phB) < max_dc_calib_)
+                       && (abs(dc_calib_.phC) < max_dc_calib_);
 
+    if (armed_state_ == 1 || armed_state_ == 2)
+    {
+        current_meas_ = {0.0f, 0.0f, 0.0f};
+        armed_state_ += 1;
+    } else if (current.has_value() && dc_calib_valid)
+    {
+        current_meas_ =
+        {
+            current->phA - dc_calib_.phA,
+            current->phB - dc_calib_.phB,
+            current->phC - dc_calib_.phC
+        };
+    } else
+    {
+        current_meas_ = std::nullopt;
+    }
+
+    if(current_meas_.has_value())
+    {
+        float Itrip = effective_current_lim_ + config_.current_lim_margin;
+        float Inorm_sq = 2.0f / 3.0f * (SQ(current_meas_->phA)
+                                      + SQ(current_meas_->phB)
+                                      + SQ(current_meas_->phC));
+
+        if(Inorm_sq > SQ(Itrip)) {
+
+        }else if(is_armed_)
+        {}
+
+        if(control_law_)
+        {
+            control_law_->on_measurement(vbus_voltage,
+                                            current_meas_.has_value()?
+                                            std::make_optional(std::array<float,3>{current_meas_->phA, current_meas_->phB, current_meas_->phC}):
+                                            std::nullopt);
+        }
+    }
+}
+
+void Motor::dc_calib_cb(std::optional<Iph_ABC_t> current)
+{
+    const float dc_calib_period = static_cast<float>(2 * TIM_1_8_PERIOD_CLOCKS) / TIM_1_8_CLOCK_HZ;
+
+
+    if (current.has_value())
+    {
+        const float calib_filter_k = std::min(dc_calib_period / config_.dc_calib_tau, 1.0f);
+        dc_calib_.phA += (current->phA - dc_calib_.phA) * calib_filter_k;
+        dc_calib_.phB += (current->phB - dc_calib_.phB) * calib_filter_k;
+        dc_calib_.phC += (current->phC - dc_calib_.phC) * calib_filter_k;
+        dc_calib_running_since_ += dc_calib_period;
+    } else {
+        dc_calib_.phA = 0.0f;
+        dc_calib_.phB = 0.0f;
+        dc_calib_.phC = 0.0f;
+        dc_calib_running_since_ = 0.0f;
+    }
+}
+
+
+void Motor::pwm_update_cb()
+{
+    float pwm_timings[3] = {NAN, NAN, NAN};
+    std::optional<float> i_bus;
+
+    error_e control_law_status = ERROR_CONTROLLER_FAILED;
+
+    if(control_law_)
+        control_law_->get_output(pwm_timings,&i_bus);
+
+    if(is_armed_)
+    {
+        uint16_t next_pwm_timings[] = {
+            (uint16_t)(pwm_timings[0] * (float)TIM_1_8_PERIOD_CLOCKS),
+            (uint16_t)(pwm_timings[1] * (float)TIM_1_8_PERIOD_CLOCKS),
+            (uint16_t)(pwm_timings[2] * (float)TIM_1_8_PERIOD_CLOCKS)
+        };
+        apply_pwm_timings(next_pwm_timings,false);
+    }
+
+    if(!is_armed_)
+    {
+        i_bus = 0.0f;
+    }else if(is_armed_ && !i_bus.has_value())
+    {
+        i_bus = 0.0f;
+    }
+
+    I_bus_ = *i_bus;
+
+    if(*i_bus < config_.I_bus_hard_min || *i_bus > config_.I_bus_hard_max)
+    {}
 }
 
 
 
+void Motor::update()
+{
+    std::optional<float> maybe_torque = torque_setpoint_src_.present();
+    if (!maybe_torque.has_value())
+    {
+        return;
+    }
+    float torque = direction_ * *maybe_torque;
+
+    auto [id,iq] = Idq_setpoint_.previous().value_or((float2D){0.0f,0.0f});
+
+    float i_lim = axis.motor_.effective_current_lim_;
+
+    id = std::clamp(id, -i_lim*0.99f, i_lim*0.99f);
+
+    iq = torque / axis_->motor_.config_.torque_constant;
+
+    float iq_lim_sqr = SQ(i_lim) - SQ(id);
+    float Iq_lim = (iq_lim_sqr <= 0.0f) ? 0.0f : sqrt(iq_lim_sqr);
+    iq = std::clamp(iq, -Iq_lim, Iq_lim);
+
+    float vd = 0.0f;
+    float vq = 0.0f;
+
+    std::optional<float> phase_vel = phase_vel_src_.present();
+
+    vd -= *phase_vel * config_.phase_inductance * iq;
+    vq += *phase_vel * config_.phase_inductance * id;
+    vd += config_.phase_resistance * id;
+    vq += config_.phase_resistance * iq;
+
+    Vdq_setpoint_ = {vd, vq};
+}
 
 
 

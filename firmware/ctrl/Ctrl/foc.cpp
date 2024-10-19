@@ -151,9 +151,8 @@ bool FOC::get_alpha_beta_output(
     return 0;
 }
 
-void FOC::update(uint32_t timestamp)
+void FOC::update()
 {
-    ctrl_timestamp_ = timestamp;
     enable_current_control_ = enable_current_control_src_;
     Idq_setpoint_ = Idq_setpoint_src_.present();
     Vdq_setpoint_ = Vdq_setpoint_src_.present();

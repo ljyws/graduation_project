@@ -8,7 +8,7 @@
 class ComPonentBase
 {
 public:
-    virtual void update(uint32_t timestamp) = 0;
+    virtual void update() = 0;
 };
 
 

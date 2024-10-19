@@ -20,6 +20,12 @@ inline bool is_nan(float x) {
     return __builtin_isnan(x);
 }
 
+template<typename T>
+constexpr T SQ(const T& x){
+    return x * x;
+}
+
+
 int mod(const int dividend, const int divisor);
 float fmodf_pos(float x, float y);
 float wrap_pm(float x, float pm_range);

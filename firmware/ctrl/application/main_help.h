@@ -21,10 +21,38 @@ class Motor;
 #include "encoder.hpp"
 #include "axis.hpp"
 
-extern "C"{
-
+extern "C" {
+    extern const unsigned char fw_version_major_;
+    extern const unsigned char fw_version_minor_;
+    extern const unsigned char fw_version_revision_;
+    extern const unsigned char fw_version_unreleased_;
 }
 
+class Ctrl
+{
+public:
+    bool save_configuration();
+    void erase_configuration();
+    void reboot() { NVIC_SystemReset(); }
+    void enter_dfu_mode();
+    bool any_error();
+    void clear_errors();
+
+    void sampling_cb();
+
+    void control_loop_cb();
+
+    float& vbus_voltage_ = ::vbus_voltage; // TODO: make this the actual variable
+    float& ibus_ = ::ibus_; // TODO: make this the actual variable
+    float ibus_report_filter_k_ = 1.0f;
+
+
+
+
+
+};
+
+extern Ctrl ctrl;
 
 #endif
 

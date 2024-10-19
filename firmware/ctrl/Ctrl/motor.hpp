@@ -7,7 +7,7 @@ class Motor;
 
 #include "board.h"
 #include "foc.hpp"
-
+#include <algorithm>
 
 
 class Motor
@@ -55,11 +55,17 @@ public:
         float phase_resistance = 0.0f;        // to be set by measure_phase_resistance
         float torque_constant = 0.04f;         // [Nm/A] for PM motors, [Nm/A^2] for induction motors. Equal to 8.27/Kv of the motor
 
+        float current_lim = 10.0f;
+        float current_lim_margin = 8.0f;
+
         float requested_current_range = 60.0f; // [A]
         float current_control_bandwidth = 1000.0f;  // [rad/s]
         float inverter_temp_limit_lower = 100;
         float inverter_temp_limit_upper = 120;
 
+        float I_bus_hard_min = -INFINITY;
+        float I_bus_hard_max = INFINITY;
+        float dc_calib_tau = 0.2f;
         Motor *parent = nullptr;
 
         void set_pre_calibrated(bool val)
@@ -83,16 +89,16 @@ public:
 
     void update_current_controller_gains();
     void disarm_with_error(error_e error);
-
+    std::optional<float> phase_current_from_adcval(uint32_t adc_value);
     bool measure_phase_resistance(float test_current, float max_voltage);
     bool measure_phase_inductance(float test_voltage);
 
     bool run_calibration();
-    void update(uint32_t timestamp);
+    void update();
 
-    void current_meas_cb(uint32_t timestamp, std::optional<Iph_ABC_t> current);
-    void dc_calib_cb(uint32_t timestamp, std::optional<Iph_ABC_t> current);
-    void pwm_update_cb(uint32_t output_timestamp);
+    void current_meas_cb(std::optional<Iph_ABC_t> current);
+    void dc_calib_cb(std::optional<Iph_ABC_t> current);
+    void pwm_update_cb();
 
     TIM_HandleTypeDef *const timer_;
     const uint8_t current_sensor_mask_;
@@ -105,11 +111,13 @@ public:
     error_e error_ = ERROR_NONE;
 
     bool is_armed_ = false;
+    uint8_t armed_state_ = 0;
     bool is_calibrated = false;
     bool is_calibrated_ = false;
 
     std::optional<Iph_ABC_t> current_meas_;
     Iph_ABC_t dc_calib_ = {0.0f, 0.0f, 0.0f};
+    float dc_calib_running_since_ = 0.0f;
     float I_bus_ = 0.0f;
     float phase_current_rev_gain_ = 0.0f;
     FOC current_control_;
