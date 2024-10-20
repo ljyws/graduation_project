@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\my_project\graduation_project\firmware\ctrl
+CMAKE_SOURCE_DIR = G:\ljyws\graduation_project\firmware\ctrl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug
+CMAKE_BINARY_DIR = G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\my_project\graduation_project\firmware\ctrl\cmake-build-de
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	"D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -639,6 +639,30 @@ Ctrl/open_loop_controller.s: Ctrl/open_loop_controller.cpp.s
 Ctrl/open_loop_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/open_loop_controller.cpp.s
 .PHONY : Ctrl/open_loop_controller.cpp.s
+
+Ctrl/test_foc.obj: Ctrl/test_foc.cpp.obj
+.PHONY : Ctrl/test_foc.obj
+
+# target to build an object file
+Ctrl/test_foc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/test_foc.cpp.obj
+.PHONY : Ctrl/test_foc.cpp.obj
+
+Ctrl/test_foc.i: Ctrl/test_foc.cpp.i
+.PHONY : Ctrl/test_foc.i
+
+# target to preprocess a source file
+Ctrl/test_foc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/test_foc.cpp.i
+.PHONY : Ctrl/test_foc.cpp.i
+
+Ctrl/test_foc.s: Ctrl/test_foc.cpp.s
+.PHONY : Ctrl/test_foc.s
+
+# target to generate assembly for a file
+Ctrl/test_foc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/test_foc.cpp.s
+.PHONY : Ctrl/test_foc.cpp.s
 
 Ctrl/utils.obj: Ctrl/utils.cpp.obj
 .PHONY : Ctrl/utils.obj
@@ -1793,6 +1817,9 @@ help:
 	@echo ... Ctrl/open_loop_controller.obj
 	@echo ... Ctrl/open_loop_controller.i
 	@echo ... Ctrl/open_loop_controller.s
+	@echo ... Ctrl/test_foc.obj
+	@echo ... Ctrl/test_foc.i
+	@echo ... Ctrl/test_foc.s
 	@echo ... Ctrl/utils.obj
 	@echo ... Ctrl/utils.i
 	@echo ... Ctrl/utils.s

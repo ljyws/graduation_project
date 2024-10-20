@@ -24,12 +24,42 @@ template<typename T>
 constexpr T SQ(const T& x){
     return x * x;
 }
+// Round to integer
+// Default rounding mode: round to nearest
+inline int round_int(float x) {
+#ifdef __arm__
+    int res;
+    asm("vcvtr.s32.f32   %[res], %[x]"
+        : [res] "=X" (res)
+        : [x] "w" (x) );
+    return res;
+#else
+    return (int)nearbyint(x);
+#endif
+}
+
+inline float wrap_pm(float x, float y) {
+#ifdef FPU_FPV4
+    float intval = (float)round_int(x / y);
+#else
+    float intval = nearbyintf(x / y);
+#endif
+    return x - intval * y;
+}
+
+// Same as fmodf but result is positive and y must be positive
+inline float fmodf_pos(float x, float y) {
+    float res = wrap_pm(x, y);
+    if (res < 0) res += y;
+    return res;
+}
+
+inline float wrap_pm_pi(float x) {
+    return wrap_pm(x, 2 * M_PI);
+}
 
 
 int mod(const int dividend, const int divisor);
-float fmodf_pos(float x, float y);
-float wrap_pm(float x, float pm_range);
-float wrap_pm_pi(float x);
 uint32_t micros(void);
 void delay_us(uint32_t us);
 std::tuple<float, float, float, bool> SVM(float alpha, float beta);

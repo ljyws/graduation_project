@@ -42,6 +42,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/open_loop_controller.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/open_loop_controller.cpp.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/test_foc.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/test_foc.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/utils.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"

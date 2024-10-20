@@ -4,6 +4,7 @@
 class Axis;
 
 #include "encoder.hpp"
+#include "open_loop_controller.hpp"
 #include "utils.hpp"
 #include <array>
 
@@ -67,6 +68,7 @@ public:
     Config_t config_;
     Encoder& encoder_;
     Motor& motor_;
+    OpenLoopController open_loop_controller_;
 
     volatile bool thread_id_valid_ = false;
     error_e error_ = ERROR_NONE;

@@ -124,7 +124,6 @@ int main(void)
   /* USER CODE END 3 */
 }
 #endif
-
 /**
   * @brief System Clock Configuration
   * @retval None

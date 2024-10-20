@@ -108,7 +108,7 @@ bool DRV8301::init()
 
     if (state_ == kStateStartupChecks)
     {
-        state_ = kStateReady;
+    state_ = kStateReady;
     }
 
     return state_ == kStateReady;
@@ -143,19 +143,19 @@ DRV8301::FaultType_e DRV8301::get_error()
 bool DRV8301::read_reg(const RegName_e regName, uint16_t *data)
 {
     tx_buf_ = build_ctrl_word(DRV8301_CtrlMode_Read, regName, 0);
-    if (!spi_arbiter_->transfer(spi_config_, cs_gpio_, (uint8_t *)(&tx_buf_), nullptr, 1, 1000))
-    {
-        return false;
-    }
+    // if (!spi_arbiter_->transfer(spi_config_, cs_gpio_, (uint8_t *)(&tx_buf_), nullptr, 1, 1000))
+    // {
+    //     return false;
+    // }
 
     delay_us(1);
 
     tx_buf_ = build_ctrl_word(DRV8301_CtrlMode_Read, regName, 0);
     rx_buf_ = 0xffff;
-    if (!spi_arbiter_->transfer(spi_config_, cs_gpio_, (uint8_t *)(&tx_buf_), (uint8_t *)(&rx_buf_), 1, 1000))
-    {
-        return false;
-    }
+    // if (!spi_arbiter_->transfer(spi_config_, cs_gpio_, (uint8_t *)(&tx_buf_), (uint8_t *)(&rx_buf_), 1, 1000))
+    // {
+    //     return false;
+    // }
 
     delay_us(1);
 
@@ -176,10 +176,14 @@ bool DRV8301::write_reg(const RegName_e regName, const uint16_t data)
 {
     // Do blocking write
     tx_buf_ = build_ctrl_word(DRV8301_CtrlMode_Write, regName, data);
-    if (!spi_arbiter_->transfer(spi_config_, cs_gpio_, (uint8_t *)(&tx_buf_), nullptr, 1, 1000))
-    {
-        return false;
-    }
+    // HAL_SPI_Transmit(&hspi3,(uint8_t*)&tx_buf_,1,1000);
+    // uint8_t _tx_buf_ = 0x70;
+    // uint8_t _rx_buf_ ;
+    // spi_arbiter_->transfer(spi_config_,cs_gpio_,&_tx_buf_,(uint8_t*)&_rx_buf_,1,100);
+    // if (!spi_arbiter_->transfer(spi_config_, cs_gpio_, (uint8_t *)(&tx_buf_), (uint8_t *)rx_buf_, 1, 1000))
+    // {
+    //     return false;
+    // }
     delay_us(1);
 
     return true;

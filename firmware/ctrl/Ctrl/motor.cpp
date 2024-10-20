@@ -237,8 +237,8 @@ bool Motor::init()
     max_allowed_current_ = max_unity_gain_current * phase_current_rev_gain_;
 
     max_dc_calib_ = 0.1f * max_allowed_current_;
-
-    if(!driver_.init())
+    //
+    if (!driver_.init())
         return false;
 
     return true;
@@ -381,7 +381,6 @@ void Motor::current_meas_cb(std::optional<Iph_ABC_t> current)
 void Motor::dc_calib_cb(std::optional<Iph_ABC_t> current)
 {
     const float dc_calib_period = static_cast<float>(2 * TIM_1_8_PERIOD_CLOCKS) / TIM_1_8_CLOCK_HZ;
-
 
     if (current.has_value())
     {

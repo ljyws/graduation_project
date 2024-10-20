@@ -10,7 +10,7 @@
 class DRV8301 : public GateDriverBase, public OpAmpBase
 {
 public:
-    typedef enum : uint32_t {
+    typedef enum {
         FaultType_NoFault  = (0 << 0),  //!< No fault
 
         // Status Register 1
@@ -97,9 +97,9 @@ private:
     static const SPI_InitTypeDef spi_config_;
 
     STM32_SPI *spi_arbiter_;
-    STM32_GPIO cs_gpio_;
-    STM32_GPIO enable_gpio_;
-    STM32_GPIO nfault_gpio_;
+    STM32_GPIO cs_gpio_{DRV_CS_GPIO_Port,DRV_CS_Pin};
+    STM32_GPIO enable_gpio_{DRV_EN_GPIO_Port,DRV_EN_Pin};
+    STM32_GPIO nfault_gpio_{DRV_FAULT_GPIO_Port,DRV_FAULT_Pin};
 
     RegisterFile regs_;
 

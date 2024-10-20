@@ -62,7 +62,7 @@ include_directories(${includes}
                    Tools
                    )
 
-add_definitions(${defines})
+add_definitions(${defines} -DFPU_FPV4)
 
 file(GLOB_RECURSE SOURCES ${sources}
                           "Application/*.*"

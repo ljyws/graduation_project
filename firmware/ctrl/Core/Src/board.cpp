@@ -3,6 +3,8 @@
 
 extern "C" void SystemClock_Config(void);
 
+STM32_GPIO led_green(LED_GREEN_GPIO_Port,LED_GREEN_Pin);
+
 STM32_SPI spi1_arbiter{&hspi1};
 STM32_SPI spi3_arbiter{&hspi3};
 Encoder encoder = {&spi1_arbiter};
@@ -48,36 +50,27 @@ bool board_init()
 
 void start_timers()
 {
-    HAL_TIM_Base_Start_IT(motor.timer_);
+    HAL_TIM_Base_Start_IT(&htim1);
 }
 
-uint16_t adc_measurements_[3] = {0};
+uint16_t adc_measurements_[12] = {0};
 void start_adcs()
 {
-    HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t *>(adc_measurements_),3);
+    HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t *>(adc_measurements_),12);
 }
 
 
 bool fetch_and_reset_adcs(std::optional<Iph_ABC_t> *current)
 {
-    bool all_adcs_done = (ADC1->SR & ADC_SR_EOC) == (ADC_SR_EOC);
+    vbus_sense_adc_cb(adc_measurements_[3]);
 
-    if(!all_adcs_done)
-        return false;
-    vbus_sense_adc_cb(adc_measurements_[4]);
 
-    if(driver.is_ready())
-    {
-        std::optional<float> phA = motor.phase_current_from_adcval(adc_measurements_[0]);
-        std::optional<float> phB = motor.phase_current_from_adcval(adc_measurements_[1]);
-        std::optional<float> phC = motor.phase_current_from_adcval(adc_measurements_[2]);
+    std::optional<float> phA = motor.phase_current_from_adcval(adc_measurements_[0]);
+    std::optional<float> phB = motor.phase_current_from_adcval(adc_measurements_[1]);
+    std::optional<float> phC = motor.phase_current_from_adcval(adc_measurements_[2]);
 
-        if(phA.has_value() && phB.has_value() && phC.has_value())
-            *current = {*phA,*phB,*phC};
-    }
-
-    ADC1->SR = ~(ADC_SR_EOC | ADC_SR_OVR);
-
+    if(phA.has_value() && phB.has_value() && phC.has_value())
+        *current = {*phA,*phB,*phC};
     return true;
 }
 
@@ -94,8 +87,8 @@ void control_loop_irq_handler(void)
 
     fetch_and_reset_adcs(&current);
 
-    if(!(TIM1->BDTR & TIM_BDTR_MOE_Msk))
-        current = {0.0f, 0.0f};
+    // if(!(TIM1->BDTR & TIM_BDTR_MOE_Msk))
+    //     current = {0.0f, 0.0f};
 
     motor.current_meas_cb(current);
 
@@ -103,5 +96,5 @@ void control_loop_irq_handler(void)
 
     motor.dc_calib_cb(current);
 
-    motor.pwm_update_cb();
+    // motor.pwm_update_cb();
 }

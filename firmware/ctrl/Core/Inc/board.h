@@ -48,14 +48,14 @@ extern DRV8301 driver;
 #define TIM_TIME_BASE TIM14
 
 // Period in [s]
-#define CURRENT_MEAS_PERIOD ( (float)2*TIM_1_8_PERIOD_CLOCKS*(TIM_1_8_RCR+1) / (float)TIM_1_8_CLOCK_HZ )
+#define CURRENT_MEAS_PERIOD ( (float)2*TIM_1_8_PERIOD_CLOCKS / (float)TIM_1_8_CLOCK_HZ )
 static const float current_meas_period = CURRENT_MEAS_PERIOD;
 
 // Frequency in [Hz]
-#define CURRENT_MEAS_HZ ( (float)(TIM_1_8_CLOCK_HZ) / (float)(2*TIM_1_8_PERIOD_CLOCKS*(TIM_1_8_RCR+1)) )
+#define CURRENT_MEAS_HZ ( (float)(TIM_1_8_CLOCK_HZ) / (float)(2*TIM_1_8_PERIOD_CLOCKS) )
 static const int current_meas_hz = CURRENT_MEAS_HZ;
 
-#define VBUS_S_DIVIDER_RATIO 19.0f
+#define VBUS_S_DIVIDER_RATIO 18.72727273f
 
 
 // Linear range of the DRV8301 opamp output: 0.3V...5.7V. We set the upper limit
@@ -64,12 +64,13 @@ static const int current_meas_hz = CURRENT_MEAS_HZ;
 #define CURRENT_SENSE_MAX_VOLT  3.0f
 
 
-extern uint16_t adc_measurements_[3];
+extern uint16_t adc_measurements_[12];
 
 void system_init();
 bool board_init();
 void start_timers();
 void start_adcs();
+
 #ifdef __cplusplus
 extern "C"{
 #endif

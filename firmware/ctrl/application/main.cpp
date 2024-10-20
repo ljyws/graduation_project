@@ -3,8 +3,6 @@
 
 osThreadId_t rtosMainTaskHandle;
 
-STM32_GPIO led_green(LED_GREEN_GPIO_Port,LED_GREEN_Pin);
-
 
 Ctrl ctrl{};
 
@@ -16,6 +14,7 @@ void Ctrl::sampling_cb()
 
 void Ctrl::control_loop_cb()
 {
+    // vofa_start();
     axis.encoder_.phase_.reset();
     axis.encoder_.phase_vel_.reset();
     axis.encoder_.pos_estimate_.reset();
@@ -26,7 +25,7 @@ void Ctrl::control_loop_cb()
 
     axis.encoder_.update();
     axis.motor_.update();
-    axis.motor_.current_control_.update();
+    // axis.motor_.current_control_.update();
 }
 
 
@@ -40,20 +39,20 @@ static void rtos_main(void* arg)
     }
 
     axis.motor_.init();
-
+    //
     axis.encoder_.init();
-
+    //
     start_adc_pwm();
 
-    for(size_t i = 0; i<2000; ++i)
-    {
-        bool motor_ready = axis.motor_.current_meas_.has_value();
-
-        if(motor_ready)
-            break;
-
-        osDelay(1);
-    }
+    // for(size_t i = 0; i<2000; ++i)
+    // {
+    //     bool motor_ready = axis.motor_.current_meas_.has_value();
+    //
+    //     if(motor_ready)
+    //         break;
+    //
+    //     osDelay(1);
+    // }
 
     axis.start_thread();
 
@@ -68,7 +67,7 @@ extern "C" int main(void)
     osKernelInitialize();
     const osThreadAttr_t rtosMainTask_attributes = {
             .name = "rtos_main_task",
-            .stack_size = 128 * 4,
+            .stack_size = 1024 * 4,
             .priority = (osPriority_t) osPriorityNormal,
     };
     rtosMainTaskHandle = osThreadNew(rtos_main, NULL, &rtosMainTask_attributes);
