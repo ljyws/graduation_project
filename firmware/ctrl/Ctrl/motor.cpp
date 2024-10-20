@@ -7,8 +7,8 @@
 #include "main_help.h"
 
 
-static constexpr auto CURRENT_ADC_LOWER_BOUND =        (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MIN_VOLT / 3.3f);
-static constexpr auto CURRENT_ADC_UPPER_BOUND =        (uint32_t)((float)(1 << 12) * CURRENT_SENSE_MAX_VOLT / 3.3f);
+static constexpr auto CURRENT_ADC_LOWER_BOUND =        (uint32_t)((float)(4096.0f) * CURRENT_SENSE_MIN_VOLT / 3.3f);
+static constexpr auto CURRENT_ADC_UPPER_BOUND =        (uint32_t)((float)(4096.0f) * CURRENT_SENSE_MAX_VOLT / 3.3f);
 
 
 
