@@ -176,6 +176,7 @@ bool DRV8301::write_reg(const RegName_e regName, const uint16_t data)
 {
     // Do blocking write
     tx_buf_ = build_ctrl_word(DRV8301_CtrlMode_Write, regName, data);
+    HAL_SPI_TransmitReceive(&hspi3,(uint8_t*)&tx_buf_,(uint8_t*)&rx_buf_,1,1000);
     // HAL_SPI_Transmit(&hspi3,(uint8_t*)&tx_buf_,1,1000);
     // uint8_t _tx_buf_ = 0x70;
     // uint8_t _rx_buf_ ;

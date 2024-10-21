@@ -25,7 +25,7 @@ void Ctrl::control_loop_cb()
 
     axis.encoder_.update();
     axis.motor_.update();
-    // axis.motor_.current_control_.update();
+    axis.motor_.current_control_.update();
 }
 
 

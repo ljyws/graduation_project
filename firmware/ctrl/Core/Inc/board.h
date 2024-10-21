@@ -18,7 +18,7 @@
 #include "arm_math.h"
 #include "vofa.h"
 
-#define SHUNT_RESISTANCE (500e-6f)
+#define SHUNT_RESISTANCE (0.0005)
 
 
 #ifdef __cplusplus

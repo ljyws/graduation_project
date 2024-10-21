@@ -58,7 +58,7 @@ public:
         float current_lim = 10.0f;
         float current_lim_margin = 8.0f;
 
-        float requested_current_range = 60.0f; // [A]
+        float requested_current_range = 120.0f; // [A]
         float current_control_bandwidth = 1000.0f;  // [rad/s]
         float inverter_temp_limit_lower = 100;
         float inverter_temp_limit_upper = 120;

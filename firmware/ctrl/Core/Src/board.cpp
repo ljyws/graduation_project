@@ -86,15 +86,13 @@ void control_loop_irq_handler(void)
     std::optional<Iph_ABC_t> current;
 
     fetch_and_reset_adcs(&current);
-
     // if(!(TIM1->BDTR & TIM_BDTR_MOE_Msk))
     //     current = {0.0f, 0.0f};
-
     motor.current_meas_cb(current);
 
     ctrl.control_loop_cb();
 
     motor.dc_calib_cb(current);
 
-    // motor.pwm_update_cb();
+    motor.pwm_update_cb();
 }
