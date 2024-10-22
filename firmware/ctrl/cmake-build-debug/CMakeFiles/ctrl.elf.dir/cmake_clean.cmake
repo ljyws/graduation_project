@@ -30,6 +30,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Core/Startup/startup_stm32f405rgtx.s.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/controller.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/controller.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/drv8301.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/encoder.cpp.obj"

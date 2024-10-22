@@ -1,6 +1,6 @@
-CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj: \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\motor.cpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\motor.hpp \
+CMakeFiles/ctrl.elf.dir/Ctrl/controller.cpp.obj: \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl\controller.cpp \
+ D:\my_project\graduation_project\firmware\ctrl\Application/main_help.h \
  D:\my_project\graduation_project\firmware\ctrl\Core\Inc/board.h \
  d:\tools\gcc\installfile\11.3\ rel1\lib\gcc\arm-none-eabi\11.3.1\include\stdbool.h \
  D:\my_project\graduation_project\firmware\ctrl\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal.h \
@@ -155,27 +155,24 @@ CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj: \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/drv8301.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/gate_driver.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/motor.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl/utils.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl/component.hpp \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\variant \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\enable_special_members.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\functional_hash.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\hash_bytes.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\aligned_buffer.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\parse_numbers.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\stl_construct.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\new \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\exception.h \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/foc.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/phase_control_law.hpp \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\optional \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\exception \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\exception.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\exception_ptr.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\cxxabi_init_exception.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\typeinfo \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\hash_bytes.h \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\new \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\nested_exception.h \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\foc.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\phase_control_law.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\component.hpp \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\enable_special_members.h \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\functional_hash.h \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\stl_construct.h \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/component.hpp \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\variant \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\aligned_buffer.h \
+ d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\parse_numbers.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\algorithm \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\stl_algo.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\algorithmfwd.h \
@@ -206,67 +203,11 @@ CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj: \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\stl_bvector.h \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\vector.tcc \
  d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\pstl\execution_defs.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\pstl\utils.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\iterator \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\iosfwd \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\stringfwd.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\postypes.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\cwchar \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\wchar.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\stream_iterator.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\streambuf_iterator.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\streambuf \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\localefwd.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\c++locale.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\clocale \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\locale.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\cctype \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\ctype.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\ios_base.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\atomicity.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\atomic_word.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\locale_classes.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\string \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\char_traits.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\ostream_insert.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\cxxabi_forced.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\basic_string.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\string_view \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\string_view.tcc \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\ext\string_conversions.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\cstdio \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\cerrno \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\errno.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\errno.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\charconv.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\basic_string.tcc \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\locale_classes.tcc \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\system_error \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\error_constants.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\stdexcept \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\c++\11.3.1\bits\streambuf.tcc \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\stat.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\time.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\machine\time.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\types.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\machine\endian.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\machine\_endian.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\select.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\_sigset.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\_timeval.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\timespec.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\_timespec.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\_pthreadtypes.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\sys\sched.h \
- d:\tools\gcc\installfile\11.3\ rel1\arm-none-eabi\include\machine\types.h \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\axis.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\encoder.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\controller.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\open_loop_controller.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl\utils.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Application/main_help.h \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/utils.hpp \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/low_level.h \
  D:\my_project\graduation_project\firmware\ctrl\Ctrl/controller.hpp \
- D:\my_project\graduation_project\firmware\ctrl\Ctrl/axis.hpp
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/axis.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/encoder.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/controller.hpp \
+ D:\my_project\graduation_project\firmware\ctrl\Ctrl/open_loop_controller.hpp

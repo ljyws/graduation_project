@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = G:\ljyws\graduation_project\firmware\ctrl
+CMAKE_SOURCE_DIR = D:\my_project\graduation_project\firmware\ctrl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug
+CMAKE_BINARY_DIR = D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	"E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"E:\Clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\clion\InstallFile\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start G:\ljyws\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\my_project\graduation_project\firmware\ctrl\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -495,6 +495,30 @@ Ctrl/axis.s: Ctrl/axis.cpp.s
 Ctrl/axis.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/axis.cpp.s
 .PHONY : Ctrl/axis.cpp.s
+
+Ctrl/controller.obj: Ctrl/controller.cpp.obj
+.PHONY : Ctrl/controller.obj
+
+# target to build an object file
+Ctrl/controller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/controller.cpp.obj
+.PHONY : Ctrl/controller.cpp.obj
+
+Ctrl/controller.i: Ctrl/controller.cpp.i
+.PHONY : Ctrl/controller.i
+
+# target to preprocess a source file
+Ctrl/controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/controller.cpp.i
+.PHONY : Ctrl/controller.cpp.i
+
+Ctrl/controller.s: Ctrl/controller.cpp.s
+.PHONY : Ctrl/controller.s
+
+# target to generate assembly for a file
+Ctrl/controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl.elf.dir\build.make CMakeFiles/ctrl.elf.dir/Ctrl/controller.cpp.s
+.PHONY : Ctrl/controller.cpp.s
 
 Ctrl/drv8301.obj: Ctrl/drv8301.cpp.obj
 .PHONY : Ctrl/drv8301.obj
@@ -1799,6 +1823,9 @@ help:
 	@echo ... Ctrl/axis.obj
 	@echo ... Ctrl/axis.i
 	@echo ... Ctrl/axis.s
+	@echo ... Ctrl/controller.obj
+	@echo ... Ctrl/controller.i
+	@echo ... Ctrl/controller.s
 	@echo ... Ctrl/drv8301.obj
 	@echo ... Ctrl/drv8301.i
 	@echo ... Ctrl/drv8301.s

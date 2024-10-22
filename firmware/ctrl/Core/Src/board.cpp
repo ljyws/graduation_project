@@ -1,5 +1,7 @@
 #include "board.h"
 #include "main_help.h"
+#include <low_level.h>
+
 
 extern "C" void SystemClock_Config(void);
 
@@ -22,8 +24,11 @@ Motor motor = {
     driver
 };
 
+Controller controller;
+
 Axis axis = {
     encoder,
+    controller,
     motor
 };
 
@@ -50,25 +55,36 @@ bool board_init()
 
 void start_timers()
 {
+    hadc1.Instance->CR2 &= ~(ADC_CR2_EXTEN | ADC_CR2_JEXTEN);
+    hadc1.Instance->CR2 |= (ADC_EXTERNALTRIGCONVEDGE_FALLING | ADC_EXTERNALTRIGCONVEDGE_FALLING);
+
+    __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_JEOC);
+    __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_EOC);
+    __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_OVR);
+    HAL_ADCEx_InjectedStart(&hadc1);
+
     HAL_TIM_Base_Start_IT(&htim1);
-    
 }
 
-uint16_t adc_measurements_[12] = {0};
+uint16_t adc_measurements_[3] = {0};
 void start_adcs()
 {
-    HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t *>(adc_measurements_),12);
+    HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t *>(adc_measurements_),3);
 }
 
 
 bool fetch_and_reset_adcs(std::optional<Iph_ABC_t> *current)
 {
+    bool all_adcs_done = (ADC1->SR & (ADC_SR_EOC | ADC_SR_JEOC)) == (ADC_SR_EOC | ADC_SR_JEOC);
+    if (!all_adcs_done)
+        return false;
+
     vbus_sense_adc_cb(adc_measurements_[3]);
 
 
-    std::optional<float> phA = motor.phase_current_from_adcval(adc_measurements_[0]);
-    std::optional<float> phB = motor.phase_current_from_adcval(adc_measurements_[1]);
-    std::optional<float> phC = motor.phase_current_from_adcval(adc_measurements_[2]);
+    std::optional<float> phA = motor.phase_current_from_adcval(ADC1->JDR1);
+    std::optional<float> phB = motor.phase_current_from_adcval(ADC1->JDR2);
+    std::optional<float> phC = motor.phase_current_from_adcval(ADC1->JDR3);
 
     if(phA.has_value() && phB.has_value() && phC.has_value())
         *current = {*phA,*phB,*phC};

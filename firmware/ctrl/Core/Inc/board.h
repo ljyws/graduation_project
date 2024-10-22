@@ -64,7 +64,7 @@ static const int current_meas_hz = CURRENT_MEAS_HZ;
 #define CURRENT_SENSE_MAX_VOLT  3.0f
 
 
-extern uint16_t adc_measurements_[12];
+extern uint16_t adc_measurements_[3];
 
 void system_init();
 bool board_init();

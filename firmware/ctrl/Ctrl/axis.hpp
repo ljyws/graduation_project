@@ -4,6 +4,7 @@
 class Axis;
 
 #include "encoder.hpp"
+#include "controller.hpp"
 #include "open_loop_controller.hpp"
 #include "utils.hpp"
 #include <array>
@@ -55,7 +56,7 @@ public:
     }Config_t;
 
 
-    Axis(Encoder &encoder, Motor &motor);
+    Axis(Encoder &encoder, Controller &controller, Motor &motor);
 
 
     bool apply_config();
@@ -68,6 +69,7 @@ public:
     Config_t config_;
     Encoder& encoder_;
     Motor& motor_;
+    Controller& controller_;
     OpenLoopController open_loop_controller_;
 
     volatile bool thread_id_valid_ = false;

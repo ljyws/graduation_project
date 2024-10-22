@@ -16,10 +16,11 @@ extern "C"{
 class Axis;
 class Motor;
 
-#include "utils.hpp"
-#include "low_level.h"
-#include "encoder.hpp"
-#include "axis.hpp"
+#include <utils.hpp>
+#include <low_level.h>
+#include <encoder.hpp>
+#include <controller.hpp>
+#include <axis.hpp>
 
 extern "C" {
     extern const unsigned char fw_version_major_;

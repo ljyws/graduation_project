@@ -1,10 +1,13 @@
 #include "main_help.h"
 #include<algorithm>
 #include "test_foc.h"
-Axis::Axis(Encoder &encoder,Motor &motor)
-    : encoder_(encoder),
-      motor_(motor) {
+Axis::Axis(Encoder &encoder, Controller &controller, Motor &motor) :
+        encoder_(encoder),
+        controller_(controller),
+        motor_(motor)
+{
     encoder_.axis_ = this;
+    controller_.axis_ = this;
     motor_.axis_ = this;
 }
 
