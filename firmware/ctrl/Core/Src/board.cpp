@@ -51,6 +51,7 @@ bool board_init()
 void start_timers()
 {
     HAL_TIM_Base_Start_IT(&htim1);
+    
 }
 
 uint16_t adc_measurements_[12] = {0};
