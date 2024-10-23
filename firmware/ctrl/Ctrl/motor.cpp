@@ -171,6 +171,8 @@ bool Motor::arm(PhaseControlLaw<3> *control_law)
         control_law_->reset();
     }
 
+    armed_state_ = 1;
+    is_armed_ = true;
     return true;
 }
 
@@ -179,9 +181,9 @@ void Motor::apply_pwm_timings(uint16_t timings[3], bool tentative)
     TIM_HandleTypeDef *htim = timer_;
     TIM_TypeDef *tim = htim->Instance;
 
-    // tim->CCR1 = timings[0];
-    // tim->CCR2 = timings[1];
-    // tim->CCR3 = timings[2];
+    tim->CCR1 = timings[0];
+    tim->CCR2 = timings[1];
+    tim->CCR3 = timings[2];
 
 
 }
@@ -228,9 +230,9 @@ bool Motor::init()
     float max_unity_gain_current = kMargin * max_output_swing * shunt_conductance_; // [A]
     float requested_gain = max_unity_gain_current / config_.requested_current_range; // [V/V]
 
-    float actual_gain;
-    if(!driver_.config(requested_gain,&actual_gain))
-        return false;
+    float actual_gain = 20;
+    // if(!driver_.config(requested_gain,&actual_gain))
+    //     return false;
 
     phase_current_rev_gain_ = 1.0f / actual_gain;
     // Clip all current control to actual usable range

@@ -215,102 +215,102 @@ bool Encoder::run_offset_calibration()
     axis_->open_loop_controller_.total_distance_ = 0.0f;
     axis_->open_loop_controller_.phase_ = axis_->open_loop_controller_.initial_phase_ = wrap_pm_pi(0 - config_.calib_scan_distance / 2.0f);
 
-    axis_->motor_.current_control_.enable_current_control_src_ = true;
-    axis_->motor_.current_control_.Idq_setpoint_src_.connect_to(&axis_->open_loop_controller_.Idq_setpoint_);
-    axis_->motor_.current_control_.Vdq_setpoint_src_.connect_to(&axis_->open_loop_controller_.Vdq_setpoint_);
-
-    axis_->motor_.current_control_.phase_src_.connect_to(&axis_->open_loop_controller_.phase_);
+    // axis_->motor_.current_control_.enable_current_control_src_ = true;
+    // axis_->motor_.current_control_.Idq_setpoint_src_.connect_to(&axis_->open_loop_controller_.Idq_setpoint_);
+    // axis_->motor_.current_control_.Vdq_setpoint_src_.connect_to(&axis_->open_loop_controller_.Vdq_setpoint_);
+    //
+    // axis_->motor_.current_control_.phase_src_.connect_to(&axis_->open_loop_controller_.phase_);
 
 
     axis_->motor_.phase_vel_src_.connect_to(&axis_->open_loop_controller_.phase_vel_);
-    axis_->motor_.current_control_.phase_vel_src_.connect_to(&axis_->open_loop_controller_.phase_vel_);
+    // axis_->motor_.current_control_.phase_vel_src_.connect_to(&axis_->open_loop_controller_.phase_vel_);
 
-    axis_->motor_.arm(&axis_->motor_.current_control_);
+    // axis_->motor_.arm(&axis_->motor_.current_control_);
 
-    // go to start position of forward scan for start_lock_duration to get ready to scan
-    for (size_t i = 0; i < (size_t)(start_lock_duration * 1000.0f); ++i)
-    {
-        if (!axis_->motor_.is_armed_)
-        {
-            return false; // TODO: return "disarmed" error code
-        }
-        if (axis_->requested_state_ != Axis::AXIS_STATE_UNDEFINED)
-        {
-            axis_->motor_.disarm();
-            return false; // TODO: return "aborted" error code
-        }
-        osDelay(1);
-    }
-
-
-    int32_t init_enc_val = shadow_count_;
-    uint32_t num_steps = 0;
-    int64_t encvaluesum = 0;
-
+    // // go to start position of forward scan for start_lock_duration to get ready to scan
+    // for (size_t i = 0; i < (size_t)(start_lock_duration * 1000.0f); ++i)
+    // {
+    //     if (!axis_->motor_.is_armed_)
+    //     {
+    //         return false;
+    //     }
+    //     if (axis_->requested_state_ != Axis::AXIS_STATE_UNDEFINED)
+    //     {
+    //         axis_->motor_.disarm();
+    //         return false;
+    //     }
+    //     osDelay(1);
+    // }
+    //
+    //
+    // int32_t init_enc_val = shadow_count_;
+    // uint32_t num_steps = 0;
+    // int64_t encvaluesum = 0;
+    //
     axis_->open_loop_controller_.target_vel_ = config_.calib_scan_omega;
     axis_->open_loop_controller_.total_distance_ = 0.0f;
-
-    while ((axis_->requested_state_ == Axis::AXIS_STATE_UNDEFINED) && axis_->motor_.is_armed_)
-    {
-        bool reached_target_dist = axis_->open_loop_controller_.total_distance_.any().value_or(-INFINITY) >= config_.calib_scan_distance;
-        if (reached_target_dist)
-        {
-            break;
-        }
-        encvaluesum += shadow_count_;
-        num_steps++;
-        osDelay(1);
-    }
-
-    // Check response and direction
-    if (shadow_count_ > init_enc_val + 8)
-    {
-        // motor same dir as encoder
-        config_.direction = 1;
-    } else if (shadow_count_ < init_enc_val - 8)
-    {
-        // motor opposite dir as encoder
-        config_.direction = -1;
-    } else
-    {
-        axis_->motor_.disarm();
-        return false;
-    }
-
-    float elec_rad_per_enc = axis_->motor_.config_.pole_pairs * 2 * M_PI * (1.0f / (float)(config_.cpr));
-    float expected_encoder_delta = config_.calib_scan_distance / elec_rad_per_enc;
-    calib_scan_response_ = std::abs(shadow_count_ - init_enc_val);
-    if (std::abs(calib_scan_response_ - expected_encoder_delta) / expected_encoder_delta > config_.calib_range)
-    {
-        axis_->motor_.disarm();
-        return false;
-    }
-
-    axis_->open_loop_controller_.target_vel_ = -config_.calib_scan_omega;
-
-    while ((axis_->requested_state_ == Axis::AXIS_STATE_UNDEFINED) && axis_->motor_.is_armed_)
-    {
-        bool reached_target_dist = axis_->open_loop_controller_.total_distance_.any().value_or(INFINITY) <= 0.0f;
-        if (reached_target_dist)
-        {
-            break;
-        }
-        encvaluesum += shadow_count_;
-        num_steps++;
-        osDelay(1);
-    }
-
-    if (!axis_->motor_.is_armed_)
-    {
-        return false;
-    }
-
-    axis_->motor_.disarm();
-
-    config_.phase_offset = encvaluesum / num_steps;
-    int32_t residual = encvaluesum - ((int64_t)config_.phase_offset * (int64_t)num_steps);
-    config_.phase_offset_float = (float)residual / (float)num_steps + 0.5f;  // add 0.5 to center-align state to phase
-
-    is_ready_ = true;
+    //
+    // while ((axis_->requested_state_ == Axis::AXIS_STATE_UNDEFINED) && axis_->motor_.is_armed_)
+    // {
+    //     bool reached_target_dist = axis_->open_loop_controller_.total_distance_.any().value_or(-INFINITY) >= config_.calib_scan_distance;
+    //     if (reached_target_dist)
+    //     {
+    //         break;
+    //     }
+    //     encvaluesum += shadow_count_;
+    //     num_steps++;
+    //     osDelay(1);
+    // }
+    //
+    // // Check response and direction
+    // if (shadow_count_ > init_enc_val + 8)
+    // {
+    //     // motor same dir as encoder
+    //     config_.direction = 1;
+    // } else if (shadow_count_ < init_enc_val - 8)
+    // {
+    //     // motor opposite dir as encoder
+    //     config_.direction = -1;
+    // } else
+    // {
+    //     axis_->motor_.disarm();
+    //     return false;
+    // }
+    //
+    // float elec_rad_per_enc = axis_->motor_.config_.pole_pairs * 2 * M_PI * (1.0f / (float)(config_.cpr));
+    // float expected_encoder_delta = config_.calib_scan_distance / elec_rad_per_enc;
+    // calib_scan_response_ = std::abs(shadow_count_ - init_enc_val);
+    // if (std::abs(calib_scan_response_ - expected_encoder_delta) / expected_encoder_delta > config_.calib_range)
+    // {
+    //     axis_->motor_.disarm();
+    //     return false;
+    // }
+    //
+    // axis_->open_loop_controller_.target_vel_ = -config_.calib_scan_omega;
+    //
+    // while ((axis_->requested_state_ == Axis::AXIS_STATE_UNDEFINED) && axis_->motor_.is_armed_)
+    // {
+    //     bool reached_target_dist = axis_->open_loop_controller_.total_distance_.any().value_or(INFINITY) <= 0.0f;
+    //     if (reached_target_dist)
+    //     {
+    //         break;
+    //     }
+    //     encvaluesum += shadow_count_;
+    //     num_steps++;
+    //     osDelay(1);
+    // }
+    //
+    // if (!axis_->motor_.is_armed_)
+    // {
+    //     return false;
+    // }
+    //
+    // axis_->motor_.disarm();
+    //
+    // config_.phase_offset = encvaluesum / num_steps;
+    // int32_t residual = encvaluesum - ((int64_t)config_.phase_offset * (int64_t)num_steps);
+    // config_.phase_offset_float = (float)residual / (float)num_steps + 0.5f;  // add 0.5 to center-align state to phase
+    //
+    // is_ready_ = true;
     return true;
 }

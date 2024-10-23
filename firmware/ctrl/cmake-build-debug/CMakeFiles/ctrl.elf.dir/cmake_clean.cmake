@@ -42,6 +42,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl.elf.dir/Ctrl/low_level.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/motor.cpp.obj.d"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/open_ctrl_test.cpp.obj"
+  "CMakeFiles/ctrl.elf.dir/Ctrl/open_ctrl_test.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/open_loop_controller.cpp.obj"
   "CMakeFiles/ctrl.elf.dir/Ctrl/open_loop_controller.cpp.obj.d"
   "CMakeFiles/ctrl.elf.dir/Ctrl/test_foc.cpp.obj"

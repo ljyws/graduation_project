@@ -18,9 +18,10 @@ void OpenLoopController::update()
     (void)prev_Vq; // unused
 
 
-    now_time = HAL_GetTick();
-    dt = (float)(now_time - pre_time) / (float)TIM_1_8_CLOCK_HZ;
-
+    // now_time = HAL_GetTick();
+    // dt = (float)(now_time - pre_time);
+    // pre_time = now_time;
+    dt = 0.0001f;
     Idq_setpoint_ = {
         std::clamp(target_current_, prev_Id - max_current_ramp_ * dt, prev_Id + max_current_ramp_ * dt),
         0.0f
@@ -34,5 +35,5 @@ void OpenLoopController::update()
     phase_vel_ = phase_vel;
     phase_ = wrap_pm_pi(phase + phase_vel * dt);
     total_distance_ = total_distance_.previous().value_or(0.0f) + phase_vel * dt;
-    pre_time = now_time;
+
 }

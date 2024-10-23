@@ -15,12 +15,15 @@ void vofa_start(void)
     float encoder_phase = axis.encoder_.phase_.present().value();
     // vofa_send_data(0, axis.encoder_.pos_abs_);
     // vofa_send_data(1,encoder_phase);
-    vofa_send_data(2,adc_measurements_[0]);
-    vofa_send_data(3,adc_measurements_[1]);
-    vofa_send_data(4,adc_measurements_[2]);
-    // vofa_send_data(5,axis.motor_.current_meas_->phA);
-    // vofa_send_data(6,axis.motor_.current_meas_->phB);
-    // vofa_send_data(7,axis.motor_.current_meas_->phC);
+    // vofa_send_data(2,adc_measurements_[0]);
+    // vofa_send_data(3,adc_measurements_[1]);
+    // vofa_send_data(4,adc_measurements_[2]);
+    vofa_send_data(5,axis.motor_.current_meas_->phA);
+    vofa_send_data(6,axis.motor_.current_meas_->phB);
+    vofa_send_data(7,axis.motor_.current_meas_->phC);
+    // vofa_send_data(5,ADC2->JDR1);
+    // vofa_send_data(6,ADC2->JDR2);
+    // vofa_send_data(7,ADC2->JDR3);
     vofa_sendframetail();
 }
 

@@ -11,13 +11,11 @@ float ibus_ = 0.0f;
 void start_adc_pwm()
 {
     // axis.motor_.disarm();
-
-
     int half_load = TIM_1_8_PERIOD_CLOCKS / 2;
     motor.timer_->Instance->CCR1 = half_load;
     motor.timer_->Instance->CCR2 = half_load;
     motor.timer_->Instance->CCR3 = half_load;
-    motor.timer_->Instance->CCR4 = TIM_1_8_PERIOD_CLOCKS - 1;
+    motor.timer_->Instance->CCR4 = TIM_1_8_PERIOD_CLOCKS - 100;
     // Enable PWM outputs (they are still masked by MOE though)
 
     motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_1);
@@ -28,14 +26,9 @@ void start_adc_pwm()
     motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_3);
     motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_4);
 
-    __HAL_ADC_ENABLE(&hadc1);
-
     osDelay(2);
-
-
-    start_timers();
     start_adcs();
-
+    start_timers();
 }
 
 

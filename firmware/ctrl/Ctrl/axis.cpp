@@ -1,6 +1,7 @@
 #include "main_help.h"
 #include<algorithm>
 #include "test_foc.h"
+#include "open_ctrl_test.h"
 Axis::Axis(Encoder &encoder, Controller &controller, Motor &motor) :
         encoder_(encoder),
         controller_(controller),
@@ -51,10 +52,13 @@ bool Axis::run_closed_loop_control_loop()
 
 void Axis::run_state_machine_loop()
 {
+
+    // test_foc_volt();
     // encoder_.run_offset_calibration();
     for(;;)
     {
         vofa_start();
+
         // // Load the task chain if a specific request is pending
         // if (requested_state_ != AXIS_STATE_UNDEFINED)
         // {
@@ -115,7 +119,6 @@ void Axis::run_state_machine_loop()
         //     std::rotate(task_chain_.begin(), task_chain_.begin() + 1, task_chain_.end());
         //     task_chain_.back() = AXIS_STATE_UNDEFINED;
         // }
-
 
     }
 

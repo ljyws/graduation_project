@@ -42,26 +42,28 @@ bool board_init()
 {
     MX_GPIO_Init();
     MX_DMA_Init();
-    MX_ADC1_Init();
     MX_SPI3_Init();
     MX_SPI1_Init();
     MX_TIM1_Init();
+    MX_ADC2_Init();
+    MX_ADC1_Init();
 
-    MX_USB_DEVICE_Init();
-
-    return 1;
+    return true;
 }
 
 
 void start_timers()
 {
-    hadc1.Instance->CR2 &= ~(ADC_CR2_EXTEN | ADC_CR2_JEXTEN);
-    hadc1.Instance->CR2 |= (ADC_EXTERNALTRIGCONVEDGE_FALLING | ADC_EXTERNALTRIGCONVEDGE_FALLING);
 
-    __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_JEOC);
-    __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_EOC);
-    __HAL_ADC_CLEAR_FLAG(&hadc1, ADC_FLAG_OVR);
-    HAL_ADCEx_InjectedStart(&hadc1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);    //starts PWM on CH1 pin
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1); //start
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);    //starts PWM on CH2 pin
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2); //start
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);    //starts PWM on CH3 pin
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3); //start
+
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 4150);
 
     HAL_TIM_Base_Start_IT(&htim1);
 }
@@ -70,21 +72,24 @@ uint16_t adc_measurements_[3] = {0};
 void start_adcs()
 {
     HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t *>(adc_measurements_),3);
+    HAL_ADCEx_InjectedStart(&hadc2);
+    __HAL_ADC_ENABLE_IT(&hadc2,ADC_IT_JEOC);
+
 }
 
 
 bool fetch_and_reset_adcs(std::optional<Iph_ABC_t> *current)
 {
-    bool all_adcs_done = (ADC1->SR & (ADC_SR_EOC | ADC_SR_JEOC)) == (ADC_SR_EOC | ADC_SR_JEOC);
-    if (!all_adcs_done)
-        return false;
+    // bool all_adcs_done = (ADC1->SR & (ADC_SR_EOC | ADC_SR_JEOC)) == (ADC_SR_EOC | ADC_SR_JEOC);
+    // if (!all_adcs_done)
+    //     return false;
 
-    vbus_sense_adc_cb(adc_measurements_[3]);
+    vbus_sense_adc_cb(adc_measurements_[0]);
 
 
-    std::optional<float> phA = motor.phase_current_from_adcval(ADC1->JDR1);
-    std::optional<float> phB = motor.phase_current_from_adcval(ADC1->JDR2);
-    std::optional<float> phC = motor.phase_current_from_adcval(ADC1->JDR3);
+    std::optional<float> phA = motor.phase_current_from_adcval(ADC2->JDR1);
+    std::optional<float> phB = motor.phase_current_from_adcval(ADC2->JDR2);
+    std::optional<float> phC = motor.phase_current_from_adcval(ADC2->JDR3);
 
     if(phA.has_value() && phB.has_value() && phC.has_value())
         *current = {*phA,*phB,*phC};
@@ -112,4 +117,5 @@ void control_loop_irq_handler(void)
     motor.dc_calib_cb(current);
 
     motor.pwm_update_cb();
+
 }
