@@ -49,7 +49,6 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/ljyws/graduation_project/firmware/ctrl_g4/Core/Src/adc.c" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/adc.c.obj" "gcc" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/adc.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl_g4/Core/Src/app_freertos.c" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/app_freertos.c.obj" "gcc" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/app_freertos.c.obj.d"
-  "G:/ljyws/graduation_project/firmware/ctrl_g4/Core/Src/dma.c" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/dma.c.obj" "gcc" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/dma.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl_g4/Core/Src/gpio.c" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/gpio.c.obj" "gcc" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/gpio.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl_g4/Core/Src/main.c" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/main.c.obj" "gcc" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/main.c.obj.d"
   "G:/ljyws/graduation_project/firmware/ctrl_g4/Core/Src/spi.c" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/spi.c.obj" "gcc" "CMakeFiles/ctrl_g4.elf.dir/Core/Src/spi.c.obj.d"

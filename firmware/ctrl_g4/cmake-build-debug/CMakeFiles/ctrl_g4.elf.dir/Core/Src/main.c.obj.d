@@ -67,7 +67,6 @@ CMakeFiles/ctrl_g4.elf.dir/Core/Src/main.c.obj: \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2/cmsis_os2.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/adc.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/main.h \
- G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/dma.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/spi.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/tim.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\USB_Device\App/usb_device.h \
@@ -84,4 +83,22 @@ CMakeFiles/ctrl_g4.elf.dir/Core/Src/main.c.obj: \
  D:/Tools/arm-none-eabi-13/13.3\ rel1/arm-none-eabi/include/sys/_locale.h \
  D:/Tools/arm-none-eabi-13/13.3\ rel1/arm-none-eabi/include/strings.h \
  D:/Tools/arm-none-eabi-13/13.3\ rel1/arm-none-eabi/include/sys/string.h \
- G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/gpio.h
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/gpio.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/board.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdbool.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\USB_Device\App/usbd_cdc_if.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc/usbd_cdc.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ioreq.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_def.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_core.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ioreq.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ctlreq.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Middlewares\ST\ARM\DSP\Inc/arm_math.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Drivers\CMSIS\Include/cmsis_compiler.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/arm-none-eabi/include/math.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/float.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/limits.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/syslimits.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/arm-none-eabi/include/limits.h \
+ D:/Tools/arm-none-eabi-13/13.3\ rel1/arm-none-eabi/include/sys/syslimits.h \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Tools/vofa.h

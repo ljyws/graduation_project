@@ -88,7 +88,7 @@ public:
     uint16_t abs_spi_dma_tx_[2] = {};
     uint16_t abs_spi_dma_rx_[2] = {};
 
-    STM32_GPIO spi_abs_cs_gpio_{GPIOA,GPIO_PIN_4};
+    STM32_GPIO spi_abs_cs_gpio_{GPIOD,GPIO_PIN_2};
     STM32_SPI::spi_task spi_task_;
 };
 

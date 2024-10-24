@@ -51,6 +51,7 @@ std::tuple<float, float, float, bool> SVM(float alpha, float beta)
                 Sextant = 2; //sextant v2-v3
         }
     } else {
+
         if (alpha >= 0.0f) {
             //quadrant IV
             if (-one_by_sqrt3 * beta > alpha)

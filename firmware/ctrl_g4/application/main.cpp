@@ -67,7 +67,7 @@ extern "C" int main(void)
     osKernelInitialize();
     const osThreadAttr_t rtosMainTask_attributes = {
             .name = "rtos_main_task",
-            .stack_size = 1024 * 4,
+            .stack_size = 128 * 4,
             .priority = (osPriority_t) osPriorityNormal,
     };
     rtosMainTaskHandle = osThreadNew(rtos_main, NULL, &rtosMainTask_attributes);

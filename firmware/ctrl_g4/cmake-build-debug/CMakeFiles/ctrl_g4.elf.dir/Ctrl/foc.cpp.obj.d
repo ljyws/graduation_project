@@ -94,7 +94,6 @@ CMakeFiles/ctrl_g4.elf.dir/Ctrl/foc.cpp.obj: \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/gpio.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/main.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/spi.h \
- G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/dma.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/tim.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Core\Inc/adc.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\USB_Device\App/usb_device.h \

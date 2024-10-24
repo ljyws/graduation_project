@@ -5,8 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ctrl_g4.elf.dir/Core/Src/app_freertos.c.obj.d"
   "CMakeFiles/ctrl_g4.elf.dir/Core/Src/board.cpp.obj"
   "CMakeFiles/ctrl_g4.elf.dir/Core/Src/board.cpp.obj.d"
-  "CMakeFiles/ctrl_g4.elf.dir/Core/Src/dma.c.obj"
-  "CMakeFiles/ctrl_g4.elf.dir/Core/Src/dma.c.obj.d"
   "CMakeFiles/ctrl_g4.elf.dir/Core/Src/gpio.c.obj"
   "CMakeFiles/ctrl_g4.elf.dir/Core/Src/gpio.c.obj.d"
   "CMakeFiles/ctrl_g4.elf.dir/Core/Src/main.c.obj"

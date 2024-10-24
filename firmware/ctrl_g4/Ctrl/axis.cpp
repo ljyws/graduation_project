@@ -33,7 +33,7 @@ void Axis::start_thread()
     osThreadId_t AxisMainTaskHandle;
     const osThreadAttr_t axisMainTask_attributes = {
         .name = "rtos_main_task",
-        .stack_size = 2048 * 4,
+        .stack_size = 1024 * 4,
         .priority = (osPriority_t) osPriorityNormal,
 };
     AxisMainTaskHandle = osThreadNew(run_state_machine_loop_wrapper, NULL, &axisMainTask_attributes);
@@ -54,7 +54,7 @@ void Axis::run_state_machine_loop()
     // encoder_.run_offset_calibration();
     for(;;)
     {
-        vofa_start();
+
         // // Load the task chain if a specific request is pending
         // if (requested_state_ != AXIS_STATE_UNDEFINED)
         // {

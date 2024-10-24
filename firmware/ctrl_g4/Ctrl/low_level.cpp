@@ -17,21 +17,20 @@ void start_adc_pwm()
     motor.timer_->Instance->CCR3 = half_load;
     motor.timer_->Instance->CCR4 = TIM_1_8_PERIOD_CLOCKS - 1;
     // Enable PWM outputs (they are still masked by MOE though)
-
-    motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_1);
-    motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_1);
-    motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_2);
-    motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_2);
-    motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_3);
-    motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_3);
-    motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_4);
+    //
+    // motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_1);
+    // motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_1);
+    // motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_2);
+    // motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_2);
+    // motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_3);
+    // motor.timer_->Instance->CCER |= (TIM_CCxN_ENABLE << TIM_CHANNEL_3);
+    // motor.timer_->Instance->CCER |= (TIM_CCx_ENABLE << TIM_CHANNEL_4);
 
     osDelay(2);
 
 
     start_timers();
     start_adcs();
-
 }
 
 

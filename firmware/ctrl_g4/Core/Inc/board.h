@@ -6,7 +6,7 @@
 #include <stm32g4xx_hal.h>
 #include <gpio.h>
 #include <spi.h>
-#include <dma.h>
+// #include <dma.h>
 #include <tim.h>
 #include <adc.h>
 #include <usb_device.h>
@@ -54,7 +54,7 @@ static const float current_meas_period = CURRENT_MEAS_PERIOD;
 #define CURRENT_MEAS_HZ ( (float)(TIM_1_8_CLOCK_HZ) / (float)(2*TIM_1_8_PERIOD_CLOCKS) )
 static const int current_meas_hz = CURRENT_MEAS_HZ;
 
-#define VBUS_S_DIVIDER_RATIO 18.72727273f
+#define VBUS_S_DIVIDER_RATIO 16.0f
 
 
 // Linear range of the DRV8301 opamp output: 0.3V...5.7V. We set the upper limit
