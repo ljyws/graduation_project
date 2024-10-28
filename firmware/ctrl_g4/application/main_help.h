@@ -20,6 +20,7 @@ class Motor;
 #include <low_level.h>
 #include <encoder.hpp>
 #include <controller.hpp>
+#include <trap_traj.hpp>
 #include <axis.hpp>
 
 extern "C" {

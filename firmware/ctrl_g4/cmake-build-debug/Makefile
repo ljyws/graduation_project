@@ -664,6 +664,30 @@ Ctrl/test_foc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Ctrl/test_foc.cpp.s
 .PHONY : Ctrl/test_foc.cpp.s
 
+Ctrl/trap_traj.obj: Ctrl/trap_traj.cpp.obj
+.PHONY : Ctrl/trap_traj.obj
+
+# target to build an object file
+Ctrl/trap_traj.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Ctrl/trap_traj.cpp.obj
+.PHONY : Ctrl/trap_traj.cpp.obj
+
+Ctrl/trap_traj.i: Ctrl/trap_traj.cpp.i
+.PHONY : Ctrl/trap_traj.i
+
+# target to preprocess a source file
+Ctrl/trap_traj.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Ctrl/trap_traj.cpp.i
+.PHONY : Ctrl/trap_traj.cpp.i
+
+Ctrl/trap_traj.s: Ctrl/trap_traj.cpp.s
+.PHONY : Ctrl/trap_traj.s
+
+# target to generate assembly for a file
+Ctrl/trap_traj.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Ctrl/trap_traj.cpp.s
+.PHONY : Ctrl/trap_traj.cpp.s
+
 Ctrl/utils.obj: Ctrl/utils.cpp.obj
 .PHONY : Ctrl/utils.obj
 
@@ -1600,6 +1624,30 @@ Stm32_Interface/stm32_gpio.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Stm32_Interface/stm32_gpio.cpp.s
 .PHONY : Stm32_Interface/stm32_gpio.cpp.s
 
+Stm32_Interface/stm32_nvm.obj: Stm32_Interface/stm32_nvm.c.obj
+.PHONY : Stm32_Interface/stm32_nvm.obj
+
+# target to build an object file
+Stm32_Interface/stm32_nvm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Stm32_Interface/stm32_nvm.c.obj
+.PHONY : Stm32_Interface/stm32_nvm.c.obj
+
+Stm32_Interface/stm32_nvm.i: Stm32_Interface/stm32_nvm.c.i
+.PHONY : Stm32_Interface/stm32_nvm.i
+
+# target to preprocess a source file
+Stm32_Interface/stm32_nvm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Stm32_Interface/stm32_nvm.c.i
+.PHONY : Stm32_Interface/stm32_nvm.c.i
+
+Stm32_Interface/stm32_nvm.s: Stm32_Interface/stm32_nvm.c.s
+.PHONY : Stm32_Interface/stm32_nvm.s
+
+# target to generate assembly for a file
+Stm32_Interface/stm32_nvm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ctrl_g4.elf.dir\build.make CMakeFiles/ctrl_g4.elf.dir/Stm32_Interface/stm32_nvm.c.s
+.PHONY : Stm32_Interface/stm32_nvm.c.s
+
 Stm32_Interface/stm32_spi.obj: Stm32_Interface/stm32_spi.cpp.obj
 .PHONY : Stm32_Interface/stm32_spi.obj
 
@@ -1844,6 +1892,9 @@ help:
 	@echo ... Ctrl/test_foc.obj
 	@echo ... Ctrl/test_foc.i
 	@echo ... Ctrl/test_foc.s
+	@echo ... Ctrl/trap_traj.obj
+	@echo ... Ctrl/trap_traj.i
+	@echo ... Ctrl/trap_traj.s
 	@echo ... Ctrl/utils.obj
 	@echo ... Ctrl/utils.i
 	@echo ... Ctrl/utils.s
@@ -1961,6 +2012,9 @@ help:
 	@echo ... Stm32_Interface/stm32_gpio.obj
 	@echo ... Stm32_Interface/stm32_gpio.i
 	@echo ... Stm32_Interface/stm32_gpio.s
+	@echo ... Stm32_Interface/stm32_nvm.obj
+	@echo ... Stm32_Interface/stm32_nvm.i
+	@echo ... Stm32_Interface/stm32_nvm.s
 	@echo ... Stm32_Interface/stm32_spi.obj
 	@echo ... Stm32_Interface/stm32_spi.i
 	@echo ... Stm32_Interface/stm32_spi.s

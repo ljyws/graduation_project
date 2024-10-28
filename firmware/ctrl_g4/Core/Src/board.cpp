@@ -52,9 +52,8 @@ void start_timers()
     HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2); //start
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);    //starts PWM on CH3 pin
     HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3); //start
-
-    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
     __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4, 4150);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
 
     HAL_TIM_Base_Start_IT(&htim1);
 }
@@ -62,7 +61,6 @@ void start_timers()
 uint16_t adc_measurements_[3] = {0};
 void start_adcs()
 {
-    // HAL_ADC_Start_DMA(&hadc2, reinterpret_cast<uint32_t *>(adc_measurements_),3);
     HAL_ADCEx_InjectedStart(&hadc1);
     HAL_ADCEx_InjectedStart(&hadc2);
     __HAL_ADC_ENABLE_IT(&hadc1,ADC_IT_JEOC);
@@ -77,8 +75,6 @@ bool fetch_and_reset_adcs(std::optional<Iph_ABC_t> *current)
     //     return false;
 
     vbus_sense_adc_cb(ADC2->JDR1);
-
-
     std::optional<float> phA = motor.phase_current_from_adcval(ADC1->JDR1);
     std::optional<float> phB = motor.phase_current_from_adcval(ADC1->JDR2);
     std::optional<float> phC = motor.phase_current_from_adcval(ADC1->JDR3);

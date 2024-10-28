@@ -44,15 +44,15 @@ static void rtos_main(void* arg)
     //
     start_adc_pwm();
 
-    // for(size_t i = 0; i<2000; ++i)
-    // {
-    //     bool motor_ready = axis.motor_.current_meas_.has_value();
-    //
-    //     if(motor_ready)
-    //         break;
-    //
-    //     osDelay(1);
-    // }
+    for(size_t i = 0; i<2000; ++i)
+    {
+        bool motor_ready = axis.motor_.current_meas_.has_value();
+
+        if(motor_ready)
+            break;
+
+        osDelay(1);
+    }
 
     axis.start_thread();
 

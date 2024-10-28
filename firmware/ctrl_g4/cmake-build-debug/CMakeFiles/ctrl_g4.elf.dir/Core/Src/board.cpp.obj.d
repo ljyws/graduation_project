@@ -192,6 +192,7 @@ CMakeFiles/ctrl_g4.elf.dir/Core/Src/board.cpp.obj: \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Application/main_help.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Ctrl/low_level.h \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Ctrl/controller.hpp \
+ G:\ljyws\graduation_project\firmware\ctrl_g4\Ctrl/trap_traj.hpp \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Ctrl/axis.hpp \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Ctrl/encoder.hpp \
  G:\ljyws\graduation_project\firmware\ctrl_g4\Ctrl/controller.hpp \
